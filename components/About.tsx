@@ -29,7 +29,7 @@ const About: React.FC = () => {
               <img
                 alt="Kritisha"
                 className={`w-full h-full object-cover transition-all duration-[1.5s] scale-110 group-hover:scale-100 ${hasHovered ? "grayscale-0" : "grayscale"}`}
-                src="/assets/profile.jpg"
+                src="./assets/profile.jpg"
               />
             </div>
             <div className="absolute -inset-6 border-2 border-accent/50 rounded-full animate-spin-slow z-0 opacity-80 pointer-events-none"></div>
