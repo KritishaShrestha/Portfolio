@@ -44,14 +44,15 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled ? "py-4" : "py-8"}`}
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled ? "py-3" : "py-8"}`}
     >
       <div
-        className={`max-w-7xl mx-auto transition-all duration-500 ${isScrolled ? "max-w-5xl" : "max-w-7xl"}`}
+        className={`max-w-7xl mx-auto transition-all duration-500 ${isScrolled ? "max-w-[58rem]" : "max-w-7xl"}`}
       >
         <div
           className={`
-          relative flex items-center justify-between px-8 h-16 rounded-[24px] transition-all duration-500
+          relative flex items-center justify-between transition-all duration-500
+          ${isScrolled ? "px-10 h-[4.5rem] rounded-[28px]" : "px-8 h-16 rounded-[32px]"}
           ${
             isScrolled
               ? "bg-white/80 dark:bg-slate-900/80 backdrop-blur-2xl shadow-xl shadow-slate-200/20 dark:shadow-black/20 border border-white/20 dark:border-slate-800"
@@ -61,7 +62,9 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
         >
           <div className="flex items-center">
             <span
-              className="text-5xl font-bold tracking-tight bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent drop-shadow-[0_3px_12px_rgba(129,170,222,0.28)]"
+              className={`font-bold tracking-tight bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent drop-shadow-[0_3px_12px_rgba(129,170,222,0.28)] transition-all duration-500 ${
+                isScrolled ? "text-4xl" : "text-5xl"
+              }`}
               style={{
                 fontFamily: '"Dancing Script", cursive',
                 WebkitBackgroundClip: "text",
@@ -74,7 +77,11 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
           </div>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center space-x-10">
+          <div
+            className={`hidden md:flex items-center transition-all duration-500 ${
+              isScrolled ? "space-x-7" : "space-x-10"
+            }`}
+          >
             {navItems.map((item) => (
               <a
                 key={item}
@@ -96,7 +103,9 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
 
             <a
               href="#contact"
-              className="text-md font-medium px-6 py-2 bg-slate-800 dark:bg-slate-100 text-white dark:text-slate-900 rounded-full hover:scale-105 hover:shadow-lg hover:shadow-primary/20 transition-all active:scale-95 flex items-center gap-2"
+              className={`text-md font-medium bg-slate-800 dark:bg-slate-100 text-white dark:text-slate-900 rounded-full hover:scale-105 hover:shadow-lg hover:shadow-primary/20 transition-all active:scale-95 flex items-center gap-2 ${
+                isScrolled ? "px-5 py-1.5" : "px-6 py-3"
+              }`}
             >
               <span>Contact</span>
             </a>

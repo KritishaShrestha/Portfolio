@@ -1,12 +1,10 @@
-import React, { useState, useRef } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 
 interface Skill {
   name: string;
   icon: string;
-  color: string; // Brand hex color
+  color: string;
   isColored?: boolean;
-  baseShape: string;
-  hoverShape: string;
 }
 
 const skills: Skill[] = [
@@ -14,179 +12,229 @@ const skills: Skill[] = [
     name: "Jira",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg",
     color: "#0052CC",
-    baseShape: "70% 30% 30% 70% / 60% 40% 60% 40%",
-    hoverShape: "30% 70% 70% 30% / 40% 60% 40% 60%",
   },
   {
     name: "Selenium",
     icon: "https://cdn.simpleicons.org/selenium/43B02A",
     color: "#43B02A",
     isColored: true,
-    baseShape: "30% 70% 70% 30% / 30% 30% 70% 70%",
-    hoverShape: "70% 30% 30% 70% / 70% 70% 30% 30%",
   },
   {
     name: "Python",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
     color: "#3776AB",
-    baseShape: "50% 50% 20% 80% / 25% 80% 20% 75%",
-    hoverShape: "20% 80% 50% 50% / 80% 25% 75% 20%",
   },
   {
     name: ".NET",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg",
     color: "#512BD4",
-    baseShape: "80% 20% 50% 50% / 50% 50% 80% 20%",
-    hoverShape: "50% 50% 80% 20% / 80% 20% 50% 50%",
   },
   {
     name: "PHP",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
     color: "#777BB4",
-    baseShape: "40% 60% 40% 60% / 70% 30% 70% 30%",
-    hoverShape: "60% 40% 60% 40% / 30% 70% 30% 70%",
   },
   {
     name: "MySQL",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
     color: "#4479A1",
-    baseShape: "60% 40% 80% 20% / 20% 80% 40% 60%",
-    hoverShape: "40% 60% 20% 80% / 80% 20% 60% 40%",
   },
   {
     name: "GitHub",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
     color: "#181717",
-    baseShape: "30% 70% 40% 60% / 50% 40% 60% 50%",
-    hoverShape: "70% 30% 60% 40% / 40% 50% 50% 60%",
   },
   {
     name: "Jupyter",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg",
     color: "#F37626",
-    baseShape: "70% 30% 60% 40% / 40% 60% 30% 70%",
-    hoverShape: "30% 70% 40% 60% / 60% 40% 70% 30%",
+  },
+  {
+    name: "React",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    color: "#61DAFB",
+  },
+  {
+    name: "Node.js",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    color: "#339933",
+  },
+  {
+    name: "HTML5",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    color: "#E34F26",
+  },
+  {
+    name: "CSS3",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    color: "#1572B6",
   },
 ];
 
-interface SkillCardProps {
-  skill: Skill;
-  index: number;
-}
+// Don't duplicate skills, so there are 12 items. This creates more spacing (30 degrees each)
+const allSkills = [...skills];
 
-const SkillCard: React.FC<SkillCardProps> = ({ skill, index }) => {
-  const cardRef = useRef<HTMLDivElement>(null);
-  const [tilt, setTilt] = useState({ x: 0, y: 0 });
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!cardRef.current) return;
-    const rect = cardRef.current.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width - 0.5) * 25;
-    const y = ((e.clientY - rect.top) / rect.height - 0.5) * -25;
-    setTilt({ x, y });
-  };
-
-  const handleMouseEnter = () => setIsHovered(true);
-  const handleMouseLeave = () => {
-    setTilt({ x: 0, y: 0 });
-    setIsHovered(false);
-  };
-
-  const glowColor = skill.color + "44"; // ~25% alpha
-  const bloomColor = skill.color + "22"; // ~13% alpha
-
-  return (
-    <div
-      ref={cardRef}
-      onMouseMove={handleMouseMove}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      className="group relative perspective-1000 cursor-pointer flex-shrink-0 mx-4 py-8"
-      style={{ zIndex: isHovered ? 50 : 1 }}
-    >
-      {/* Dynamic Background Bloom */}
-      <div
-        className="absolute inset-0 transition-all duration-700 blur-[40px] -z-10 opacity-0 group-hover:opacity-60 scale-[1.6]"
-        style={{
-          borderRadius: isHovered ? skill.hoverShape : skill.baseShape,
-          backgroundColor: bloomColor,
-          transform: `translate(${tilt.x * -0.2}px, ${tilt.y * 0.2}px)`,
-        }}
-      ></div>
-
-      {/* Additional Circular Glow */}
-      <div
-        className="absolute inset-0 transition-all duration-1000 blur-[60px] -z-20 opacity-0 group-hover:opacity-40 scale-[2]"
-        style={{
-          borderRadius: "50%",
-          backgroundColor: glowColor,
-          transform: `translate(${tilt.x * -0.3}px, ${tilt.y * 0.3}px) scale(${isHovered ? 1.2 : 1})`,
-        }}
-      ></div>
-
-      <div
-        className={`
-          relative w-[140px] md:w-[160px] aspect-square flex flex-col items-center justify-center
-          bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl 
-          border border-slate-200 dark:border-slate-700
-          transition-all duration-500 cubic-bezier(0.23, 1, 0.32, 1)
-          group-hover:border-primary/60 group-hover:bg-white dark:group-hover:bg-slate-800
-        `}
-        style={{
-          transform: `rotateX(${tilt.y}deg) rotateY(${tilt.x}deg) scale(${isHovered ? 1.12 : 1})`,
-          borderRadius: isHovered ? skill.hoverShape : skill.baseShape,
-          boxShadow: isHovered
-            ? `0 25px 50px -15px rgba(0,0,0,0.2), 0 0 30px ${glowColor}`
-            : "0 8px 20px -8px rgba(0,0,0,0.1)",
-        }}
-      >
-        <div
-          className="relative mb-3 transition-transform duration-500"
-          style={{
-            transform: `translate(${tilt.x * 0.4}px, ${tilt.y * -0.4}px)`,
-          }}
-        >
-          <img
-            src={skill.icon}
-            alt={skill.name}
-            className={`w-12 h-12 md:w-14 md:h-14 object-contain transition-all duration-500 ${isHovered ? "scale-120" : skill.isColored ? "opacity-100" : "grayscale opacity-70"}`}
-            style={{
-              filter: isHovered ? `drop-shadow(0 0 12px ${glowColor})` : "none",
-            }}
-          />
-        </div>
-
-        <span
-          className={`font-semibold text-sm md:text-base uppercase tracking-wide transition-colors duration-500 ${isHovered ? "text-slate-900 dark:text-white" : "text-slate-500 dark:text-slate-400"}`}
-        >
-          {skill.name}
-        </span>
-
-        {/* Brand Indicator Dot */}
-        <div
-          className={`absolute top-4 right-4 w-2 h-2 rounded-full transition-all duration-500 ${isHovered ? "opacity-100 scale-100" : "opacity-0 scale-0"}`}
-          style={{
-            backgroundColor: skill.color,
-            boxShadow: `0 0 12px ${skill.color}`,
-          }}
-        />
-      </div>
-    </div>
-  );
+const normalizeOffset = (value: number) => {
+  const normalized = value % 1;
+  return normalized < 0 ? normalized + 1 : normalized;
 };
 
+const clamp = (value: number, min: number, max: number) =>
+  Math.min(max, Math.max(min, value));
+
 const Skills: React.FC = () => {
-  const doubledSkills = [...skills, ...skills, ...skills];
+  const [orbitOffset, setOrbitOffset] = useState(0);
+  const [hoveredSkill, setHoveredSkill] = useState<number | null>(null);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  
+  const [isDragging, setIsDragging] = useState(false);
+  const dragStartX = useRef(0);
+  const dragStartOffset = useRef(0);
+  
+  const orbitAreaRef = useRef<HTMLDivElement | null>(null);
+  const [orbitAreaSize, setOrbitAreaSize] = useState({ width: 0, height: 0 });
+  
+  const isPaused = hoveredSkill !== null || isDragging;
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const updatePreference = () => setPrefersReducedMotion(mediaQuery.matches);
+    updatePreference();
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener("change", updatePreference);
+      return () => mediaQuery.removeEventListener("change", updatePreference);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (prefersReducedMotion) return;
+    let frame = 0;
+    let lastTick = performance.now();
+
+    const animate = (now: number) => {
+      const delta = now - lastTick;
+      lastTick = now;
+      if (!isPaused) {
+        setOrbitOffset((prev) => normalizeOffset(prev - delta * 0.00004));
+      }
+      frame = requestAnimationFrame(animate);
+    };
+
+    frame = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(frame);
+  }, [isPaused, prefersReducedMotion]);
+
+  useEffect(() => {
+    const node = orbitAreaRef.current;
+    if (!node) return;
+    const updateBounds = () => {
+      const rect = node.getBoundingClientRect();
+      setOrbitAreaSize({ width: rect.width, height: rect.height });
+    };
+    updateBounds();
+    const observer = new ResizeObserver(updateBounds);
+    observer.observe(node);
+    window.addEventListener("resize", updateBounds);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", updateBounds);
+    };
+  }, []);
+
+  const handlePointerDown = (e: React.PointerEvent) => {
+    setIsDragging(true);
+    dragStartX.current = e.clientX;
+    dragStartOffset.current = orbitOffset;
+    e.currentTarget.setPointerCapture(e.pointerId);
+  };
+
+  const handlePointerMove = (e: React.PointerEvent) => {
+    if (!isDragging) return;
+    const deltaX = e.clientX - dragStartX.current;
+    // Map pixel drag to circle rotation offset (1 full rotation = 1 unit)
+    const width = orbitAreaSize.width || 1000;
+    setOrbitOffset(normalizeOffset(dragStartOffset.current + deltaX / (width * 1.5)));
+  };
+
+  const handlePointerUp = (e: React.PointerEvent) => {
+    setIsDragging(false);
+    e.currentTarget.releasePointerCapture(e.pointerId);
+  };
+
+  const effectiveWidth = orbitAreaSize.width || 960;
+  const effectiveHeight = orbitAreaSize.height || 400;
+
+  const isMobile = effectiveWidth < 640;
+  const isTablet = effectiveWidth < 1024;
+
+  const iconSize = clamp(
+    effectiveWidth * (isMobile ? 0.07 : isTablet ? 0.06 : 0.05),
+    isMobile ? 28 : isTablet ? 34 : 40,
+    isMobile ? 44 : isTablet ? 56 : 72
+  );
+
+  // Make the arc larger so it's less congested and the curve is a bit flatter
+  const radius = clamp(
+    effectiveWidth * (isMobile ? 0.45 : 0.4),
+    isMobile ? 110 : isTablet ? 130 : 150,
+    isMobile ? 340 : isTablet ? 500 : 800
+  );
+
+  // Center of the circle pushed down so only the top of the arc is visible
+  const centerX = effectiveWidth / 2;
+  let centerY = effectiveHeight + radius * (isMobile ? 0.1 : 0.2);
+
+  // Ensure the top of the arc doesn't overflow the container
+  const minTop = iconSize * 0.6;
+  if (centerY - radius < minTop) {
+    centerY = radius + minTop;
+  }
+
+  const orbitItems = useMemo(
+    () =>
+      allSkills.map((skill, index) => {
+        const progress = normalizeOffset(index / allSkills.length + orbitOffset);
+        // Angle goes from PI to 3*PI so the top half is between PI and 2PI
+        const angle = Math.PI + progress * Math.PI * 2;
+        
+        return {
+          ...skill,
+          index,
+          angle,
+          left: centerX + radius * Math.cos(angle),
+          top: centerY + radius * Math.sin(angle),
+          // Visible if we are reasonably above the bottom edge mapping to the center
+          isVisible: Math.sin(angle) <= 0.3,
+        };
+      }),
+    [allSkills.length, centerX, centerY, orbitOffset, radius]
+  );
+
+  const activeSkill = useMemo(() => {
+    if (orbitItems.length === 0) return null;
+    if (hoveredSkill !== null) return orbitItems[hoveredSkill];
+    let closest = orbitItems[0];
+    let minDiff = Infinity;
+    for (const item of orbitItems) {
+      if (!item.isVisible) continue;
+      // angle is between PI and 3PI. Top of arc is 1.5 * Math.PI
+      const diff = Math.abs(item.angle - 1.5 * Math.PI);
+      if (diff < minDiff) {
+        minDiff = diff;
+        closest = item;
+      }
+    }
+    return closest;
+  }, [hoveredSkill, orbitItems]);
 
   return (
     <section
       id="skills"
-      className="min-h-screen flex items-center pt-24 pb-12 px-6 bg-slate-50 dark:bg-slate-900/50 transition-colors relative overflow-hidden"
+      className="min-h-[100svh] flex flex-col pt-16 sm:pt-20 pb-10 px-4 md:px-6 bg-white dark:bg-slate-900/50 transition-colors relative overflow-hidden select-none"
     >
-      <div className="max-w-7xl mx-auto w-full">
-        <div className="mb-16 px-6">
-          <h2 className="text-5xl md:text-6xl font-bold text-slate-900 dark:text-white leading-[1.1]">
+      <div className="max-w-7xl mx-auto w-full my-6 sm:my-10 flex-shrink-0">
+        <div className="mb-4 sm:mb-8 px-2 md:px-6 text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 dark:text-white leading-[1.1]">
             Tools and{" "}
             <span className="italic font-light text-slate-400">Skills</span>{" "}
             <br />
@@ -196,40 +244,93 @@ const Skills: React.FC = () => {
             </span>
           </h2>
         </div>
-
-        <div className="relative w-full overflow-hidden marquee-mask py-8">
-          <div className="flex animate-marquee hover:pause-marquee">
-            {doubledSkills.map((skill, index) => (
-              <SkillCard
-                key={`${skill.name}-${index}`}
-                skill={skill}
-                index={index % skills.length}
-              />
-            ))}
-          </div>
-        </div>
       </div>
 
-      <style>{`
-        @keyframes marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-33.3333%); }
-        }
-        .animate-marquee {
-          animation: marquee 20s linear infinite; /* Faster scroll speed (20s instead of 50s) */
-          width: fit-content;
-        }
-        .animate-marquee:hover {
-          animation-play-state: paused;
-        }
-        .marquee-mask {
-          mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-          -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-        }
-        .perspective-1000 {
-          perspective: 1000px;
-        }
-      `}</style>
+      <div className="flex-grow w-full max-w-6xl mx-auto relative flex items-end justify-center">
+        <div
+          ref={orbitAreaRef}
+          className="w-full h-[45vh] sm:h-[50vh] min-h-[280px] sm:min-h-[360px] md:min-h-[400px] relative overflow-hidden touch-none cursor-grab active:cursor-grabbing"
+          onPointerDown={handlePointerDown}
+          onPointerMove={handlePointerMove}
+          onPointerUp={handlePointerUp}
+          onPointerCancel={handlePointerUp}
+          onPointerLeave={handlePointerUp}
+        >
+          {orbitItems.map((item, idx) => {
+            if (!item.isVisible) return null;
+            const isHovered = hoveredSkill === idx;
+
+            // In the image, the icons are upright (no rotation) and form a beautiful arc
+            // When hovered, the item scales up and glows
+            return (
+              <div
+                key={`${item.name}-${idx}`}
+                onMouseEnter={() => setHoveredSkill(idx)}
+                onMouseLeave={() => setHoveredSkill(null)}
+                className="absolute flex items-center justify-center pointer-events-auto transition-transform duration-300 ease-out"
+                style={{
+                  left: `${item.left}px`,
+                  top: `${item.top}px`,
+                  transform: `translate(-50%, -50%) scale(${isHovered ? 1.3 : 1})`,
+                  zIndex: isHovered ? 50 : 10,
+                }}
+              >
+                <img
+                  src={item.icon}
+                  alt={item.name}
+                  draggable={false}
+                  className="object-contain transition-all duration-300"
+                  style={{
+                    width: `${iconSize}px`,
+                    height: `${iconSize}px`,
+                    filter: isHovered
+                      ? `drop-shadow(0 0 20px ${item.color}88)`
+                      : "drop-shadow(0 4px 6px rgba(0,0,0,0.1))",
+                  }}
+                />
+              </div>
+            );
+          })}
+
+          {/* Active Skill Center Display */}
+          {activeSkill && (
+            <div
+              className="absolute pointer-events-none flex flex-col items-center justify-center transition-all duration-500 ease-out z-0"
+              style={{
+                left: `${centerX}px`,
+                // Position it visually inside the arc
+                top: `${centerY - radius + radius * 0.5}px`,
+                transform: "translate(-50%, -50%)",
+              }}
+            >
+              <div
+                className="relative flex flex-col items-center justify-center animate-in fade-in zoom-in duration-500 rounded-full border border-slate-200/50 dark:border-slate-700/50 shadow-2xl backdrop-blur-sm bg-white/30 dark:bg-slate-900/40"
+                style={{
+                  width: `${clamp(radius * 0.4, isMobile ? 100 : 130, isMobile ? 180 : 320)}px`,
+                  height: `${clamp(radius * 0.4, isMobile ? 100 : 130, isMobile ? 180 : 320)}px`,
+                  boxShadow: `0 0 60px ${activeSkill.color}33, inset 0 0 30px ${activeSkill.color}22`,
+                }}
+              >
+                <div
+                  className="absolute inset-0 blur-3xl transition-colors duration-500 rounded-full"
+                  style={{ backgroundColor: activeSkill.color, opacity: 0.15 }}
+                />
+                <img
+                  src={activeSkill.icon}
+                  alt={activeSkill.name}
+                  className="w-1/3 h-1/3 object-contain transition-all duration-500 drop-shadow-xl z-10"
+                  style={{
+                    filter: `drop-shadow(0 0 20px ${activeSkill.color}88)`,
+                  }}
+                />
+                <h3 className="mt-2 sm:mt-4 text-lg sm:text-2xl md:text-4xl font-bold tracking-tight text-slate-900 dark:text-white transition-colors duration-500 z-10">
+                  {activeSkill.name}
+                </h3>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
     </section>
   );
 };

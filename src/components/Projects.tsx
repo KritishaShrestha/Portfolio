@@ -45,53 +45,144 @@ const Projects: React.FC = () => {
   return (
     <section
       id="projects"
-      className="min-h-[100svh] py-14 md:py-16 lg:py-20 flex items-center bg-white dark:bg-slate-950 transition-colors"
+      className="min-h-[100svh] xl:h-[100svh] pt-28 md:pt-32 xl:pt-20 pb-10 md:pb-12 xl:pb-6 flex items-start bg-[#f2f2f2] dark:bg-slate-900 xl:overflow-hidden transition-colors"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full">
-        <div className="text-center mb-10 md:mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white tracking-tighter">
-            Projects
-          </h2>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full xl:h-full flex flex-col">
+        <div className="mb-8 md:mb-10 xl:mb-5 xl:flex xl:items-end xl:justify-between xl:gap-8 text-center xl:text-left">
+          <div>
+            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-400 dark:text-slate-500">
+              Selected Work
+            </p>
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white tracking-tighter">
+              Projects
+            </h2>
+          </div>
           <a
             href="#"
-            className="inline-flex mt-6 text-sm font-bold uppercase tracking-widest border-b-2 border-slate-900 dark:border-slate-100 pb-1 hover:text-primary hover:border-primary transition-colors"
+            className="inline-flex mt-5 xl:mt-0 items-center rounded-full border border-slate-200 px-5 py-2.5 text-xs font-bold uppercase tracking-[0.22em] text-slate-700 hover:border-primary hover:text-primary transition-colors dark:border-slate-800 dark:text-slate-200"
           >
             View All
           </a>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6 justify-items-center">
+        <div className="grid flex-1 min-h-0 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xl:grid-rows-2 gap-4 md:gap-5 auto-rows-[minmax(16rem,auto)] xl:auto-rows-auto">
           {projects.map((project, index) => (
-            <div
+            <article
               key={index}
-              className="group w-full max-w-[350px] bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-700 transition-all hover:shadow-2xl hover:shadow-primary/5"
+              className={[
+                "group relative overflow-hidden rounded-[2rem] border border-slate-200/80 bg-white shadow-[0_24px_70px_-40px_rgba(15,23,42,0.35)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_36px_90px_-46px_rgba(15,23,42,0.42)] dark:border-slate-800 dark:bg-slate-900",
+                index === 0
+                  ? "md:col-span-2 xl:col-span-2 xl:row-span-2 min-h-[24rem] xl:min-h-0 xl:h-full"
+                  : "min-h-[18rem] xl:min-h-0 xl:h-full",
+                index === 2 ? "xl:col-start-3 xl:row-start-2" : "",
+              ].join(" ")}
             >
-              <div className="aspect-[16/9] overflow-hidden">
+              <div
+                className={[
+                  "absolute inset-0 overflow-hidden",
+                  index === 0 ? "" : "opacity-90",
+                ].join(" ")}
+              >
                 <img
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 saturate-110"
+                  className={[
+                    "h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 saturate-110",
+                    index === 0 ? "" : "scale-[1.02]",
+                  ].join(" ")}
                   src={project.image}
                 />
+                <div
+                  className={[
+                    "absolute inset-0",
+                    index === 0
+                      ? "bg-gradient-to-br from-slate-950/70 via-slate-950/35 to-orange-500/20"
+                      : "bg-gradient-to-br from-slate-950/72 via-slate-950/48 to-orange-500/12",
+                  ].join(" ")}
+                />
               </div>
-              <div className="p-5">
-                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 mb-2">
-                  {project.category} • {project.year}
-                </p>
-                <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors text-slate-900 dark:text-white">
-                  {project.title}
-                </h3>
-                <p className="text-sm text-slate-500 dark:text-slate-400 font-light line-clamp-2">
-                  {project.description}
-                </p>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex mt-4 text-xs font-semibold uppercase tracking-[0.18em] text-primary hover:text-slate-900 dark:hover:text-white transition-colors"
+
+              <div
+                className={[
+                  "relative z-10 flex h-full flex-col",
+                  index === 0
+                    ? "justify-between p-5 md:p-6 xl:p-5"
+                    : "justify-between p-5 xl:p-5",
+                ].join(" ")}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <p
+                    className={[
+                      "text-[10px] font-bold uppercase tracking-[0.22em]",
+                      index === 0 ? "text-white/75" : "text-white/70",
+                    ].join(" ")}
+                  >
+                    {project.category}
+                  </p>
+                  <span
+                    className={[
+                      "rounded-full border px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em]",
+                      index === 0
+                        ? "border-white/20 bg-white/10 text-white/80"
+                        : "border-white/15 bg-white/10 text-white/78",
+                    ].join(" ")}
+                  >
+                    {project.year}
+                  </span>
+                </div>
+
+                <div className={index === 0 ? "max-w-xl" : "mt-10 max-w-sm"}>
+                  <h3
+                    className={[
+                      "font-bold transition-colors group-hover:text-primary",
+                      index === 0
+                        ? "text-2xl md:text-3xl xl:text-[1.75rem] text-white"
+                        : "text-xl xl:text-[1.35rem] text-white",
+                    ].join(" ")}
+                  >
+                    {project.title}
+                  </h3>
+                  <p
+                    className={[
+                      "mt-3 text-sm md:text-base font-light",
+                      index === 0
+                        ? "max-w-lg text-white/78"
+                        : "text-white/72 line-clamp-2 xl:line-clamp-3",
+                    ].join(" ")}
+                  >
+                    {project.description}
+                  </p>
+                </div>
+
+                <div
+                  className={
+                    index === 0
+                      ? "flex items-end justify-between gap-4"
+                      : "mt-6 flex items-center justify-between gap-4"
+                  }
                 >
-                  View Project
-                </a>
+                  <div
+                    className={[
+                      "text-xs uppercase tracking-[0.2em]",
+                      index === 0 ? "text-white/60" : "text-white/45",
+                    ].join(" ")}
+                  >
+                    {index === 0 ? "Featured build" : "Case study"}
+                  </div>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={[
+                      "inline-flex items-center rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] transition-colors",
+                      index === 0
+                        ? "bg-white text-slate-900 hover:bg-orange-100"
+                        : "bg-white text-slate-900 hover:bg-orange-100",
+                    ].join(" ")}
+                  >
+                    View Project
+                  </a>
+                </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

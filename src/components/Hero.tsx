@@ -56,15 +56,17 @@ const Hero: React.FC = () => {
         </div>
 
         <div className="relative h-[480px] flex items-center justify-center">
+          <div className="hidden dark:block absolute w-[470px] h-[470px] rounded-full bg-slate-700/75 blur-[95px]" />
+
           {/* Ambient Glows */}
           <div
-            className="absolute w-[420px] h-[420px] bg-accent/20 dark:bg-accent/10 rounded-full blur-[100px] transition-transform duration-1000 ease-out"
+            className="absolute w-[440px] h-[440px] bg-accent/45 dark:bg-accent/26 rounded-full blur-[105px] transition-transform duration-1000 ease-out"
             style={{
               transform: `translate(${mousePos.x * -15}px, ${mousePos.y * -15}px)`,
             }}
           ></div>
           <div
-            className="absolute w-[300px] h-[300px] bg-primary/20 dark:bg-primary/5 rounded-full blur-[90px] top-1/2 left-1/2 transition-transform duration-700 ease-out"
+            className="absolute w-[300px] h-[300px] dark:w-[330px] dark:h-[330px] bg-primary/25 dark:bg-primary/25 rounded-full blur-[90px] top-1/2 left-1/2 dark:top-[58%] dark:left-[56%] transition-transform duration-700 ease-out"
             style={{
               transform: `translate(${mousePos.x * 20}px, ${mousePos.y * 20}px)`,
             }}
@@ -78,7 +80,7 @@ const Hero: React.FC = () => {
             }}
           >
             <div
-              className="absolute left-1/2 top-1/2 w-[110px] h-[110px] rounded-full bg-gradient-to-br from-primary/20 via-accent/10 to-transparent blur-2xl animate-pulse-slow"
+              className="absolute left-1/2 top-1/2 w-[110px] h-[110px] rounded-full bg-gradient-to-br from-primary/20 via-accent/10 to-transparent dark:from-primary/24 dark:via-accent/18 blur-2xl animate-pulse-slow"
               style={{
                 transform: `translate(calc(-50% + ${mousePos.x * 30}px), calc(-50% + ${mousePos.y * 30}px))`,
               }}
