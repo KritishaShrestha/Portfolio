@@ -15,7 +15,10 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20 pb-12 overflow-hidden bg-[#fbfbfc] dark:bg-slate-950 transition-colors">
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center pt-20 pb-12 overflow-hidden bg-[#fbfbfc] dark:bg-slate-950 transition-colors"
+    >
       <div className="max-w-7xl mx-auto px-6 w-full grid md:grid-cols-2 gap-12 items-center">
         <div className="z-20 animate-fade-in-up">
           <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm text-xs font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">
@@ -289,10 +292,23 @@ const Hero: React.FC = () => {
               Detail-Oriented
             </div>
             <div
+              className="absolute top-20 -left-20 px-5 py-2.5 bg-white/95 dark:bg-slate-800/95 backdrop-blur-xl rounded-2xl shadow-xl text-[10px] font-bold uppercase tracking-widest text-slate-800 dark:text-slate-100 border-2 border-accent/30 animate-bounce transition-all hover:scale-110"
+              style={{ animationDuration: "4.8s", animationDelay: "0.6s" }}
+            >
+              Power Nap
+            </div>
+            <div
               className="absolute -bottom-10 -left-10 px-6 py-3 bg-white/95 dark:bg-slate-800/95 backdrop-blur-xl rounded-2xl shadow-xl text-[10px] font-bold uppercase tracking-widest text-slate-800 dark:text-slate-100 border-2 border-accent/40 animate-bounce transition-all hover:scale-110"
               style={{ animationDuration: "5s", animationDelay: "1s" }}
             >
               Bug Hunter
+            </div>
+          
+            <div
+              className="absolute -bottom-3 right-0 px-5 py-2.5 bg-white/95 dark:bg-slate-800/95 backdrop-blur-xl rounded-2xl shadow-xl text-[10px] font-bold uppercase tracking-widest text-slate-800 dark:text-slate-100 border-2 border-accent/35 animate-bounce transition-all hover:scale-110"
+              style={{ animationDuration: "6.2s", animationDelay: "1.4s" }}
+            >
+              Fast Learner
             </div>
           </div>
         </div>

@@ -61,7 +61,8 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
         `}
         >
           <div className="flex items-center">
-            <span
+            <a
+              href="#hero"
               className={`font-bold tracking-tight bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent drop-shadow-[0_3px_12px_rgba(129,170,222,0.28)] transition-all duration-500 ${
                 isScrolled ? "text-4xl" : "text-5xl"
               }`}
@@ -72,8 +73,8 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
                 textShadow: "0 1px 0 rgba(15, 23, 42, 0.12)",
               }}
             >
-              Kritisha
-            </span>
+              Kri.
+            </a>
           </div>
 
           {/* Desktop Nav */}
