@@ -27,8 +27,7 @@ const Hero: React.FC = () => {
           <h1 className="text-4xl md:text-8xl font-bold tracking-tight mb-8 leading-[1.05] text-slate-900 dark:text-white">
             Hi, I'm <br />
             <span
-              className="bg-gradient-to-r from-primary to-accent 
-                 bg-clip-text text-transparent"
+              className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
             >
               Kritisha.
             </span>
@@ -303,7 +302,7 @@ const Hero: React.FC = () => {
             >
               Bug Hunter
             </div>
-          
+
             <div
               className="absolute -bottom-3 right-0 px-5 py-2.5 bg-white/95 dark:bg-slate-800/95 backdrop-blur-xl rounded-2xl shadow-xl text-[10px] font-bold uppercase tracking-widest text-slate-800 dark:text-slate-100 border-2 border-accent/35 animate-bounce transition-all hover:scale-110"
               style={{ animationDuration: "6.2s", animationDelay: "1.4s" }}
