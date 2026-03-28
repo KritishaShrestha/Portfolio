@@ -10,7 +10,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("about");
 
-  const navItems = ["about", "skills", "projects"];
+  const navItems = ["about", "skills", "my-works"];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,7 +21,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
   }, []);
 
   useEffect(() => {
-    const sectionIds = ["about", "skills", "projects", "contact"];
+    const sectionIds = ["about", "skills", "my-works", "contact"];
 
     const handleActiveSection = () => {
       const scrollAnchor = window.scrollY + 180;
@@ -95,7 +95,9 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
                     : "text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary"
                 }`}
               >
-                {item.charAt(0).toUpperCase() + item.slice(1)}
+                {item === "my-works"
+                  ? "My Works"
+                  : item.charAt(0).toUpperCase() + item.slice(1)}
                 <span
                   className={`absolute -bottom-1 left-0 h-[2px] bg-primary transition-all duration-300 ${
                     activeSection === item ? "w-full" : "w-0 group-hover:w-full"
@@ -166,7 +168,9 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
                   : "text-slate-900 dark:text-white hover:text-primary"
               }`}
             >
-              {item.charAt(0).toUpperCase() + item.slice(1)}
+              {item === "my-works"
+                ? "My Works"
+                : item.charAt(0).toUpperCase() + item.slice(1)}
             </a>
           ))}
           <a

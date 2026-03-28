@@ -42,17 +42,20 @@ const projects: Project[] = [
   },
 ];
 
-const Projects: React.FC = () => {
+const MyWorks: React.FC = () => {
   return (
     <section
-      id="projects"
+      id="my-works"
       className="min-h-[100svh] xl:h-[100svh] py-20 md:py-24 bg-[#f2f2f2] dark:bg-slate-900 transition-colors"
     >
       <div className="max-w-7xl mx-auto px-6 w-full">
         <div className="mb-10 md:mb-14 text-center">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 dark:text-white leading-[1.1]">
             Works that reflects
-            <span className="italic font-light text-slate-400"> precision, purpose</span>
+            <span className="italic font-light text-slate-400">
+              {" "}
+              precision, purpose
+            </span>
             <br />
             and
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
@@ -66,7 +69,13 @@ const Projects: React.FC = () => {
           {projects.map((project, index) => (
             <article
               key={index}
-              className="group isolate overflow-hidden rounded-[1.6rem] border border-slate-400 dark:border-slate-600 bg-white dark:bg-slate-900 shadow-[0_24px_70px_-45px_rgba(15,23,42,0.45)] transform-gpu [transform:translateZ(0)] [backface-visibility:hidden] will-change-transform transition-transform duration-500 ease-out hover:-translate-y-1"
+              className={`group isolate overflow-hidden rounded-[1.6rem] border shadow-[0_24px_70px_-45px_rgba(15,23,42,0.45)] transform-gpu [transform:translateZ(0)] [backface-visibility:hidden] will-change-transform transition-transform duration-500 ease-out hover:-translate-y-1
+                ${
+                  index === 0
+                    ? "border-2 border-transparent bg-gradient-to-br from-primary/10 to-accent/10 dark:from-primary/20 dark:to-accent/20 relative before:content-[''] before:absolute before:inset-0 before:rounded-[1.6rem] before:border-4 before:border-transparent before:bg-gradient-to-br before:from-primary/70 before:to-accent/70 before:opacity-80 before:z-[-1] before:pointer-events-none"
+                    : "border-slate-400 dark:border-slate-600 bg-white dark:bg-slate-900"
+                }
+              `}
             >
               <div className="relative h-40 md:h-36 xl:h-40 overflow-hidden rounded-t-[1.6rem] bg-slate-200 dark:bg-slate-800">
                 <img
@@ -85,8 +94,10 @@ const Projects: React.FC = () => {
                   <p className="inline-flex rounded-full bg-slate-100 dark:bg-slate-800 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-slate-600 dark:text-slate-300">
                     {project.category}
                   </p>
-                  <span className="text-[10px] font-semibold uppercase tracking-[0.15em] text-slate-400 dark:text-slate-500">
-                    Featured
+                  <span
+                    className={`text-[10px] font-semibold uppercase tracking-[0.15em] ${index === 0 ? "text-slate-700 dark:text-slate-200" : "text-slate-400 dark:text-slate-500"}`}
+                  >
+                    {index === 0 ? "Highlight" : "Featured"}
                   </span>
                 </div>
 
@@ -127,4 +138,4 @@ const Projects: React.FC = () => {
   );
 };
 
-export default Projects;
+export default MyWorks;

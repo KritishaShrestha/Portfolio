@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Skills from "../components/Skills";
-import Projects from "../components/Projects";
+import MyWorks from "../components/My_Work";
 import Contact from "../components/Contact";
 import { useLocation } from "react-router-dom";
 
@@ -34,7 +34,7 @@ const Home: React.FC<HomeProps> = ({ isDarkMode, toggleDarkMode }) => {
       <Hero />
       <About />
       <Skills />
-      <Projects />
+      <MyWorks />
       <Contact />
     </main>
   );
