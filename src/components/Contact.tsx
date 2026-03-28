@@ -119,12 +119,12 @@ const Contact: React.FC = () => {
   return (
     <section
       id="contact"
-      className="h-[100svh] flex items-center bg-white dark:bg-slate-900/50 transition-colors"
+      className="min-h-[100svh] py-16 sm:py-20 md:py-0 flex items-center bg-white dark:bg-slate-900/50 transition-colors"
     >
-      <div className="max-w-5xl w-full mx-auto px-5 md:px-6 mt-8 md:mt-14">
+      <div className="max-w-5xl w-full mx-auto px-4 sm:px-5 md:px-6 mt-0 md:mt-14">
         <div className="rounded-[1.6rem] overflow-hidden border border-slate-200 dark:border-transparent shadow-[0_24px_70px_-38px_rgba(15,23,42,0.45)] dark:shadow-[0_28px_80px_-42px_rgba(96,165,250,0.16)] bg-white dark:bg-slate-900">
           <div className="grid lg:grid-cols-[0.95fr_1.35fr] min-h-[28rem] md:min-h-[32rem]">
-            <div className="relative px-7 py-6 md:px-10 md:py-7 bg-[#fbfbfc] dark:bg-slate-950 text-slate-900 dark:text-white lg:border-r border-transparent dark:lg:border-transparent overflow-hidden">
+            <div className="relative px-5 sm:px-7 py-6 md:px-10 md:py-7 bg-[#fbfbfc] dark:bg-slate-950 text-slate-900 dark:text-white lg:border-r border-transparent dark:lg:border-transparent overflow-hidden">
               <div className="pointer-events-none absolute inset-0">
                 <div className="hidden dark:block absolute -left-16 -top-20 h-64 w-64 rounded-full bg-slate-700/75 blur-[95px]" />
                 <div className="absolute right-[-4rem] bottom-[-3rem] h-56 w-56 rounded-full bg-accent/50 dark:bg-accent/32 blur-[105px]" />
@@ -133,7 +133,7 @@ const Contact: React.FC = () => {
               <div className="relative z-10 flex min-h-full flex-col">
                 <div className="flex-1 flex items-center">
                   <div className="w-full">
-                    <h2 className="text-5xl md:text-6xl font-bold text-slate-900 dark:text-white leading-[1.1]">
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-900 dark:text-white leading-[1.1]">
                       Let's{" "}
                       <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                         connect.
@@ -155,7 +155,7 @@ const Contact: React.FC = () => {
 
             <form
               onSubmit={handleSubmit}
-              className="bg-white dark:bg-slate-900 px-7 py-6 md:px-10 md:py-7 lg:border-l lg:border-slate-200 dark:lg:border-transparent"
+              className="bg-white dark:bg-slate-900 px-5 sm:px-7 py-6 md:px-10 md:py-7 lg:border-l lg:border-slate-200 dark:lg:border-transparent"
             >
               <div className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6 md:gap-8">

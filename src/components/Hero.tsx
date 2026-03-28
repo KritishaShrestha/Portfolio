@@ -17,30 +17,29 @@ const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center pt-20 pb-12 overflow-hidden bg-[#fbfbfc] dark:bg-slate-950 transition-colors"
+      className="relative min-h-screen flex items-center pt-24 sm:pt-28 md:pt-20 pb-10 md:pb-12 overflow-hidden bg-[#fbfbfc] dark:bg-slate-950 transition-colors"
     >
-      <div className="max-w-7xl mx-auto px-6 w-full grid md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full grid md:grid-cols-2 gap-10 md:gap-12 items-center">
         <div className="z-20 animate-fade-in-up">
           <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm text-xs font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">
             Quality Assurance Enthusiast
           </div>
-          <h1 className="text-4xl md:text-8xl font-bold tracking-tight mb-8 leading-[1.05] text-slate-900 dark:text-white">
+          <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold tracking-tight mb-6 sm:mb-8 leading-[1.05] text-slate-900 dark:text-white">
             Hi, I'm <br />
-            <span
-              className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
-            >
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Kritisha.
             </span>
           </h1>
-          <p className="text-lg text-slate-500 dark:text-slate-400 font-light leading-relaxed max-w-lg mb-12">
+          <p className="text-base sm:text-lg text-slate-500 dark:text-slate-400 font-light leading-relaxed max-w-lg mb-8 sm:mb-12">
             I'm on a journey to become a QA Engineer—where clean code meets
             great user experience. Currently learning the art of breaking things
             (methodically, of course).
           </p>
-          <div className="flex flex-wrap gap-5">
+          <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-5">
             <a
-              href="#"
-              className="px-8 py-4 bg-slate-800 dark:bg-slate-100 text-white dark:text-slate-900 rounded-full font-medium transition-all hover:scale-105 hover:shadow-xl hover:shadow-primary/20 flex items-center gap-2"
+              href="/Kritisha Shrestha.pdf"
+              download
+              className="w-full sm:w-auto justify-center px-6 sm:px-8 py-3.5 sm:py-4 bg-slate-800 dark:bg-slate-100 text-white dark:text-slate-900 rounded-full font-medium transition-all hover:scale-105 hover:shadow-xl hover:shadow-primary/20 flex items-center gap-2"
             >
               <span>Download CV</span>
               <span className="material-symbols-outlined text-md">
@@ -49,7 +48,7 @@ const Hero: React.FC = () => {
             </a>
             <a
               href="#contact"
-              className="px-8 py-4 bg-slate-200 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 rounded-full font-medium transition-all hover:scale-105 hover:shadow-lg flex items-center gap-2"
+              className="w-full sm:w-auto justify-center px-6 sm:px-8 py-3.5 sm:py-4 bg-slate-200 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 rounded-full font-medium transition-all hover:scale-105 hover:shadow-lg flex items-center gap-2"
             >
               <span>Contact Me</span>
               <span className="material-symbols-outlined text-md">mail</span>
@@ -57,7 +56,7 @@ const Hero: React.FC = () => {
           </div>
         </div>
 
-        <div className="relative h-[480px] flex items-center justify-center">
+        <div className="relative h-[360px] sm:h-[420px] md:h-[480px] mt-6 md:mt-0 flex items-center justify-center">
           <div className="hidden dark:block absolute w-[470px] h-[470px] rounded-full bg-slate-700/75 blur-[95px]" />
 
           {/* Ambient Glows */}
@@ -97,7 +96,7 @@ const Hero: React.FC = () => {
             <span className="absolute left-[24%] bottom-[30%] w-4 h-1.5 rounded-full bg-accent/50 animate-tilt"></span>
           </div>
 
-          <div className="relative w-full max-w-[380px] aspect-square flex items-center justify-center group">
+          <div className="relative w-full max-w-[300px] sm:max-w-[340px] md:max-w-[380px] aspect-square flex items-center justify-center group">
             <svg
               viewBox="0 0 240 240"
               className="w-full h-full transition-all duration-500 ease-out"
@@ -285,26 +284,26 @@ const Hero: React.FC = () => {
 
             {/* Playful Floating Badges */}
             <div
-              className="absolute -top-12 -right-4 px-6 py-3 bg-white/95 dark:bg-slate-800/95 backdrop-blur-xl rounded-2xl shadow-xl text-[10px] font-bold uppercase tracking-widest text-slate-800 dark:text-slate-100 border-2 border-primary/20 animate-bounce transition-all hover:scale-110"
+              className="hidden sm:block absolute -top-12 -right-4 px-6 py-3 bg-white/95 dark:bg-slate-800/95 backdrop-blur-xl rounded-2xl shadow-xl text-[10px] font-bold uppercase tracking-widest text-slate-800 dark:text-slate-100 border-2 border-primary/20 animate-bounce transition-all hover:scale-110"
               style={{ animationDuration: "4s" }}
             >
               Detail-Oriented
             </div>
             <div
-              className="absolute top-20 -left-20 px-5 py-2.5 bg-white/95 dark:bg-slate-800/95 backdrop-blur-xl rounded-2xl shadow-xl text-[10px] font-bold uppercase tracking-widest text-slate-800 dark:text-slate-100 border-2 border-accent/30 animate-bounce transition-all hover:scale-110"
+              className="hidden sm:block absolute top-20 -left-20 px-5 py-2.5 bg-white/95 dark:bg-slate-800/95 backdrop-blur-xl rounded-2xl shadow-xl text-[10px] font-bold uppercase tracking-widest text-slate-800 dark:text-slate-100 border-2 border-accent/30 animate-bounce transition-all hover:scale-110"
               style={{ animationDuration: "4.8s", animationDelay: "0.6s" }}
             >
-              Power Nap
+              Problem Solving
             </div>
             <div
-              className="absolute -bottom-10 -left-10 px-6 py-3 bg-white/95 dark:bg-slate-800/95 backdrop-blur-xl rounded-2xl shadow-xl text-[10px] font-bold uppercase tracking-widest text-slate-800 dark:text-slate-100 border-2 border-accent/40 animate-bounce transition-all hover:scale-110"
+              className="hidden sm:block absolute -bottom-10 -left-10 px-6 py-3 bg-white/95 dark:bg-slate-800/95 backdrop-blur-xl rounded-2xl shadow-xl text-[10px] font-bold uppercase tracking-widest text-slate-800 dark:text-slate-100 border-2 border-accent/40 animate-bounce transition-all hover:scale-110"
               style={{ animationDuration: "5s", animationDelay: "1s" }}
             >
               Bug Hunter
             </div>
 
             <div
-              className="absolute -bottom-3 right-0 px-5 py-2.5 bg-white/95 dark:bg-slate-800/95 backdrop-blur-xl rounded-2xl shadow-xl text-[10px] font-bold uppercase tracking-widest text-slate-800 dark:text-slate-100 border-2 border-accent/35 animate-bounce transition-all hover:scale-110"
+              className="hidden sm:block absolute -bottom-3 right-0 px-5 py-2.5 bg-white/95 dark:bg-slate-800/95 backdrop-blur-xl rounded-2xl shadow-xl text-[10px] font-bold uppercase tracking-widest text-slate-800 dark:text-slate-100 border-2 border-accent/35 animate-bounce transition-all hover:scale-110"
               style={{ animationDuration: "6.2s", animationDelay: "1.4s" }}
             >
               Fast Learner

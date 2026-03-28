@@ -1,0 +1,1176 @@
+{
+  "Project details": [
+    {
+      "Note:": "Column1",
+      "This is strictly for personal project/ demo project and not for professional use.": "Column2"
+    },
+    {
+      "Note:": "Project Name ",
+      "This is strictly for personal project/ demo project and not for professional use.": "Orange HRM"
+    },
+    {
+      "Note:": "Module",
+      "This is strictly for personal project/ demo project and not for professional use.": "MyInfo"
+    },
+    {
+      "Note:": "Prepared by",
+      "This is strictly for personal project/ demo project and not for professional use.": "Kritisha Shrestha"
+    },
+    {
+      "Note:": "Application Link",
+      "This is strictly for personal project/ demo project and not for professional use.": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+    },
+    {
+      "Note:": "Function Requirement Document",
+      "This is strictly for personal project/ demo project and not for professional use.": "..\\Downloads\\OrangeHRM-FRS-V1.pdf"
+    }
+  ],
+  "Test Scenarios": [
+    {
+      "SNO": 1,
+      "Req#ID": "3.1.1",
+      "Scenario": "ESS user Login",
+      "No. of Test Cases": 4
+    },
+    {
+      "SNO": 2,
+      "Req#ID": "3.1.1",
+      "Scenario": "ESS user can view Personal Details",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 3,
+      "Req#ID": "3.1.1",
+      "Scenario": "ESS user can edit Personal Details",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 4,
+      "Req#ID": "3.1.1",
+      "Scenario": "ESS user cannot edit restricted fields in Personal details",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 5,
+      "Req#ID": "3.1.2",
+      "Scenario": "ESS user can add photo of himself/herself",
+      "No. of Test Cases": 12
+    },
+    {
+      "SNO": 6,
+      "Req#ID": "3.1.3",
+      "Scenario": "ESS user can view Contact Details",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 7,
+      "Req#ID": "3.1.3",
+      "Scenario": "ESS user can edit Contact Details",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 8,
+      "Req#ID": "3.1.4",
+      "Scenario": "ESS user can add Emergency Contact",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 9,
+      "Req#ID": "3.1.4",
+      "Scenario": "ESS user can add multiple Emergency Contacts",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 10,
+      "Req#ID": "3.1.4",
+      "Scenario": "ESS user can view Emergency Contact",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 11,
+      "Req#ID": "3.1.4",
+      "Scenario": "ESS user can delete Emergency Contact",
+      "No. of Test Cases": 1,
+      "__EMPTY_211": " "
+    },
+    {
+      "SNO": 12,
+      "Req#ID": "3.1.4",
+      "Scenario": "ESS user can add Attachment under Emergency Contact",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 13,
+      "Req#ID": "3.1.5",
+      "Scenario": "ESS user can add dependants",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 14,
+      "Req#ID": "3.1.5",
+      "Scenario": "ESS user can add multiple dependants",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 15,
+      "Req#ID": "3.1.5",
+      "Scenario": "ESS user can delete dependants",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 16,
+      "Req#ID": "3.1.5",
+      "Scenario": "ESS user can add Attachment under dependants",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 17,
+      "Req#ID": "3.1.6",
+      "Scenario": "ESS user can add immigration information ",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 18,
+      "Req#ID": "3.1.6",
+      "Scenario": "ESS user can add multiple entries of immigration",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 19,
+      "Req#ID": "3.1.6",
+      "Scenario": "ESS user can delete immigration information",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 20,
+      "Req#ID": "3.1.6",
+      "Scenario": "ESS user can attach documents under immigration record",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 21,
+      "Req#ID": "3.1.7",
+      "Scenario": "ESS user cannot make changes in the job details",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 22,
+      "Req#ID": "3.1.7",
+      "Scenario": "ESS user can view job details",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 23,
+      "Req#ID": "3.1.8",
+      "Scenario": "ESS user cannot edit salary detail",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 24,
+      "Req#ID": "3.1.9",
+      "Scenario": "ESS user can view list of supervisor they report to",
+      "No. of Test Cases": 2
+    },
+    {
+      "SNO": 25,
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can add Work Experience",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 26,
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can add multiple work experiences",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 27,
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can delete Work Expericence",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 28,
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can add Education Details",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 29,
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can add multiple entries of Education Details",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 30,
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can delete Education Details",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 31,
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can add Skills",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 32,
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can add multiple Skills",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 33,
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can delete Skills",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 34,
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can add Languages",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 35,
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can add multiple Languages",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 36,
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can delete Languages",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 37,
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can add License",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 38,
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can add multiple License",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 39,
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can delete Licence",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 40,
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can add Attachments under License",
+      "No. of Test Cases": 3
+    },
+    {
+      "SNO": 41,
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can add multiple Attachments",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 42,
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can delete Attachments",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 43,
+      "Req#ID": "3.1.11",
+      "Scenario": "ESS user can add Membership",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 44,
+      "Req#ID": "3.1.11",
+      "Scenario": "ESS user can add multiple Membership",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 45,
+      "Req#ID": "3.1.11",
+      "Scenario": "ESS user can delete Membership",
+      "No. of Test Cases": 1
+    },
+    {
+      "SNO": 46,
+      "Req#ID": "3.1.11",
+      "Scenario": "ESS user can upload Attachments under Membership",
+      "No. of Test Cases": 1
+    }
+  ],
+  "Test Cases": [
+    {
+      "TC#ID": "TC_MyInfo_001",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.1",
+      "Scenario": "ESS user login",
+      "Test Case Title": "Verify login with valid ESS username and valid password",
+      "Steps": "1. Launch browser.\r\n2. Open url \"https://opensource-demo.orangehrmlive.com\"\r\n3. Provide valid username.\r\n4. Provide valid password.\r\n5. Click on login button.",
+      "Test Data": "validusername1/validpassword",
+      "Expected Results": "Login successful.\r\nESS user should see  the MyInfo page.",
+      "Actual Result": "Dashboard page is seen after the login instead of MyInfo page.",
+      "Status(Padded/Failed)": "Failed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_002",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.1",
+      "Scenario": "ESS user login",
+      "Test Case Title": "Verify login with valid ESS username and invalid password",
+      "Steps": "1. Launch browser.\r\n2. Open url \"https://opensource-demo.orangehrmlive.com\"\r\n3. Provide valid username.\r\n4. Provide invalid password.\r\n5. Click on login button.",
+      "Test Data": "validusername/invalidpassword",
+      "Expected Results": "Invalid Credentials",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_003",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.1",
+      "Scenario": "ESS user login",
+      "Test Case Title": "Verify login with invalid ESS username and valid password",
+      "Steps": "1. Launch browser.\r\n2. Open url \"https://opensource-demo.orangehrmlive.com\"\r\n3. Provide invalid username.\r\n4. Provide valid password.\r\n5. Click on login button.",
+      "Test Data": "invalidusername/validpassword",
+      "Expected Results": "Invalid Credentials",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_004",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.1",
+      "Scenario": "ESS user login",
+      "Test Case Title": "Verify login with invalid ESS username and invalid password",
+      "Steps": "1. Launch browser.\r\n2. Open url \"https://opensource-demo.orangehrmlive.com\"\r\n3. Provide invalid username.\r\n4. Provide invalid password.\r\n5. Click on login button.",
+      "Test Data": "invalidusername/invalidpassword",
+      "Expected Results": "Invalid Credentials",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_005",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.1",
+      "Scenario": "ESS user can view Personal Details",
+      "Test Case Title": "Verify ESS user is able to view Personal Details",
+      "Steps": "1. Login to OrangeHRM as ESS User.\r\n2. Click on MyInfo tab.\r\n3. Click on Personal Detail button.",
+      "Test Data": "N/A",
+      "Expected Results": "ESS user should be able to view Personal Details",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_006",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.1",
+      "Scenario": "ESS user can edit Personal Details",
+      "Test Case Title": "Verify ESS user is able to edit non-restricted Personal Details",
+      "Steps": "1. Login to OrangeHRM as ESS User.\r\n2. Click on MyInfo tab.\r\n3. Click on Personal Detail button.\r\n4. Edit First Name, Middle Name, Last Name, Other Id, License Expire Date, Gender, Nationality, Marital Status, Nick Name, Smoker button and Millitary Service\r\n5. Click \"Save\" once completed.",
+      "Test Data": "N/A",
+      "Expected Results": "ESS user should be able to edit and save the listed details.",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_007",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.1",
+      "Scenario": "ESS user cannot edit restricted fields in Personal details",
+      "Test Case Title": "Verify ESS user is not able to edit restricted Personal Details",
+      "Steps": "1. Login to OrangeHRM as ESS User.\r\n2. Click on MyInfo tab.\r\n3. Click on Personal Detail button.\r\n4. Edit Employee ID, SSN No, SIN No, Driver License No and Date of Birth. \r\n(There is no SSN No and SIN No in image, need to consult with Manager)",
+      "Test Data": "N/A",
+      "Expected Results": "ESS user should not be able to edit the listed details.",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Partially Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_008",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.2",
+      "Scenario": "ESS user can add photo of himself/herself",
+      "Test Case Title": "Verify ESS user is able to add their photograph",
+      "Steps": "1. Login to OrangeHEM as ESS User.\r\n2. Click on MyInfo tab.\r\n3. Click on Photograph at the corner of the screen.\r\n4. Click \"Browse\" and select photograph from relevant path.\r\n5. Click \"Upload\".",
+      "Test Data": "Images",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_009",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.3",
+      "Scenario": "ESS user can view Contact Details",
+      "Test Case Title": "Verify ESS user is able to view Contact Details",
+      "Steps": "1. Login to OrangeHRM as ESS User.\r\n2. Click on MyInfo tab.\r\n3. Click on Contact Detail button.",
+      "Test Data": "N/A",
+      "Expected Results": "ESS user should be able to view the Contact Details.",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_010",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.3",
+      "Scenario": "ESS user can edit Contact Details",
+      "Test Case Title": "Verify ESS user is able to edit the Contact Details.",
+      "Steps": "1. Login to OrangeHRM as ESS User.\r\n2. Click on MyInfo tab.\r\n3. Click on Contact Detail button.\r\n4. Click \"Edit\" to enter informaton.\r\n4. Edit Country, Street 1, Street 2, City/Town, State/Provience, ZIP code, Home telephone, mobile, Work telephone, Work email, Other email.\r\n5. Click \"Save\" once completed.",
+      "Test Data": "N/A",
+      "Expected Results": "ESS user should be able to edit and save the listed details.",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_011",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.4",
+      "Scenario": "ESS user can add Emergency Contact",
+      "Test Case Title": "Verify ESS user is able to add Emergency Contact.",
+      "Steps": "1. Login to OrangeHRM as ESS User.\r\n2. Click on MyInfo tab.\r\n3. Click on Emergency Contact button.\r\n4. Click on \"Add\" button.\r\n4. Enter Name, Relationship, Home Telephone or Mobile or Work Telephone number.\r\n5. Click \"Save\" once completed.",
+      "Test Data": "N/A",
+      "Expected Results": "The emergency contact should be listed.",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_012",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.4",
+      "Scenario": "ESS user can add multiple Emergency Contacts",
+      "Test Case Title": "Verify ESS user is able to add multiple Emergency Contacts",
+      "Steps": "Repeat the steps of \"TC_MyInfo_011\".",
+      "Test Data": "N/A",
+      "Expected Results": "Multiple emergency contacts should be listed.",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_013",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.4",
+      "Scenario": "ESS user can delete Emergency Contact",
+      "Test Case Title": "Verify ESS user is able to delete Emergency Contact",
+      "Steps": "1. Login to OrangeHRM as ESS User.\r\n2. Click on MyInfo tab.\r\n3. Click on Emergency Contact button.\r\n4. Click on the check box next to particular entry(one or more).\r\n5. Click on \"Delete\".",
+      "Test Data": "N/A",
+      "Expected Results": "One or more of the selected entry/ies should be deleted.",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_014",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.4",
+      "Scenario": "ESS user can add Attachment under Emergency Contact",
+      "Test Case Title": "Verify ESS user is able to add attachment to support the details.",
+      "Steps": "1. Login to OrangeHRM as ESS User.\r\n2. Click on MyInfo tab.\r\n3. Click on Emergency Contact button.  \r\n4. Click on \"Add\" under Attachment.\r\n5. Select the file from relevant path and click on \"Upload\".",
+      "Test Data": "N/A",
+      "Expected Results": "Attachment file should appear under Attachment.",
+      "Actual Result": "The requirement document contains \"Upload\" button but application contains \"Save\" button",
+      "Status(Padded/Failed)": "Partially Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_015",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.5",
+      "Scenario": "ESS user can add dependants",
+      "Test Case Title": "Verify ESS user is able to add dependants.",
+      "Steps": "1. Login to OrangeHRM as ESS User. \r\n2. Click on MyInfo tab.\r\n3. Click on Dependants button. \r\n4. Click on \"Add\" button. \r\n5. Enter Name, Relationship(required) and Date of Birth.\r\n6. Click on \"Save\".",
+      "Test Data": "N/A",
+      "Expected Results": "New dependant should be listed. ",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_016",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.5",
+      "Scenario": "ESS user can add multiple dependants",
+      "Test Case Title": "Verify ESS user is able to add multiple Dependants.",
+      "Steps": "Repeat the steps of \"TC_MyInfo_015\".",
+      "Test Data": "N/A",
+      "Expected Results": "Multiple dependants should be listed.",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_017",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.5",
+      "Scenario": "ESS user can delete dependants",
+      "Test Case Title": "Verify ESS user is able to delete dependants",
+      "Steps": "1. Login to OrangeHRM as ESS User.\r\n2. Click on MyInfo tab. \r\n3. Click  on Dependants button.\r\n4. Click on the check box next to particular entry(one or more).\r\n5. Click on \"Delete\".",
+      "Test Data": "N/A",
+      "Expected Results": "One or more of the selected entry/ies should be deleted.",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_018",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.5",
+      "Scenario": "ESS user can add Attachment under dependants",
+      "Test Case Title": "Verify ESS user is able to add attachment to support the details.",
+      "Steps": "1. Login to OrangeHRM as ESS User. \r\n2. Click on MyInfo tab. \r\n3. Click on dependant button. \r\n4. Click on \"Add\" under Attachment. \r\n5. Select the file from relevant path and click on \"Upload\".",
+      "Test Data": "N/A",
+      "Expected Results": "Attachment file should appear under Attachment.",
+      "Actual Result": "The requirement document contains \"Upload\" button but application contains \"Save\" button",
+      "Status(Padded/Failed)": "Partially Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_019",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.6",
+      "Scenario": "ESS user can add immigration information ",
+      "Test Case Title": "Verify ESS user is able to add immigration information",
+      "Steps": "1. Login to OrangeHRM as ESS User. \r\n2. Click on MyInfo tab. \r\n3. Click on Immigration button. \r\n4. Save the Document type, Number, Issued Date, Expiry Date, Eligible Status, Eligible Review Date, Issued by and you may write comment if necessary.\r\n5. Click on Save button.",
+      "Test Data": "N/A",
+      "Expected Results": "The immigration details should be listed.",
+      "Actual Result": "No immigration form is seen directly after clicking on immigration button, you have to click on \"Add\" button to get the form.\r\nESS user is able to add information to the form.",
+      "Status(Padded/Failed)": "Failed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_020",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.6",
+      "Scenario": "ESS user can add multiple entries of immigration",
+      "Test Case Title": "Verify ESS user is able to add multiple immigration information",
+      "Steps": "Repeat the steps of \"TC_MyInfo_019\".",
+      "Test Data": "N/A",
+      "Expected Results": "Multiple immigration details  should be listed.",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_021",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.6",
+      "Scenario": "ESS user can delete immigration information",
+      "Test Case Title": "Verify ESS user is able to delete immigration information",
+      "Steps": "1. Login to OrangeHRM as ESS User.\r\n2. Click on MyInfo tab. \r\n3. Click  on Immigraion button.\r\n4. Click on the check box next to particular entry(one or more).\r\n5. Click on \"Delete\".",
+      "Test Data": "N/A",
+      "Expected Results": "One or more of the selected entry/ies should be deleted.",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_022",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.6",
+      "Scenario": "ESS user can attach documents under immigration record",
+      "Test Case Title": "Verify ESS user is able to add attachment to support the details.",
+      "Steps": "1. Login to OrangeHRM as ESS User. \r\n2. Click on MyInfo tab. \r\n3. Click on Immigration button. \r\n4. Click on \"Add\" under Attachment. \r\n5. Select the file from relevant path and click on \"Upload\".",
+      "Test Data": "N/A",
+      "Expected Results": "Attachment file should appear under Attachment.",
+      "Actual Result": "The requirement document contains \"Upload\" button but application contains \"Save\" button",
+      "Status(Padded/Failed)": "Partially Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_023",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.7",
+      "Scenario": "ESS user cannot make changes in the job details",
+      "Test Case Title": "Verify ESS user is not able to edit job details.",
+      "Steps": "1. Login to OrangeHRM as ESS User.\r\n2. Click on MyInfo tab.\r\n3. Click on Job button.\r\n4. Edit Job title, job specification, employment status, job category, joined date, sub unit, location, employment contract start date, employment contract end date. (all restricted)\r\n",
+      "Test Data": "N/A",
+      "Expected Results": "The ESS user should not be able to edit any of the listed details.",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_024",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.7",
+      "Scenario": "ESS user can view job details",
+      "Test Case Title": "Verify ESS user is able to view job details",
+      "Steps": "1. Login to OrangeHRM as ESS User.\r\n2. Click on MyInfo tab.\r\n3. Click on Job button.",
+      "Test Data": "N/A",
+      "Expected Results": "The ESS user should be able to view job details.",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_025",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.8",
+      "Scenario": "ESS user cannot edit salary details",
+      "Test Case Title": "Verify ESS user is not able to edit salary details.",
+      "Steps": "1. Login to OrangeHRM as ESS User.\r\n2. Click on MyInfo tab.\r\n3. Click on Salary button.\r\n4. Edit Salary component, pay frequency, currency, amount, comments, direct deposit details (all restricted).",
+      "Test Data": "N/A",
+      "Expected Results": "The ESS user should not be able to edit any of the listed details.",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_026",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.9",
+      "Scenario": "ESS user can view list of supervisor they report to",
+      "Test Case Title": "Verify ESS user is able to view the list of supervisor that they report to and list of subordinates(if ESS supervisor)",
+      "Steps": "1. Login to OrangeHRM as ESS User.\r\n2. Click on MyInfo tab.\r\n3. Click on Report To button.",
+      "Test Data": "N/A",
+      "Expected Results": "The ESS user should be able to view list of supervisor and list of subordinate(only if you are an ESS supervisor)",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_027",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can add Work Experience",
+      "Test Case Title": "Verify ESS user is able to add Work Experience.",
+      "Steps": "1. Login to OrangeHRM as ESS User.\r\n2. Click on MyInfo tab.\r\n3. Click on Qualification button.\r\n4. Click on \"Add\" button under Work Experience.\r\n4. Enter all the required fields.\r\n5. Click \"Save\" once completed.",
+      "Test Data": "N/A",
+      "Expected Results": "The Work experience should be listed.",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_028",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can add multiple Work experiences",
+      "Test Case Title": "Verify ESS user is able to add multiple Work Experiences",
+      "Steps": "Repeat the steps of \"TC_MyInfo_027\".",
+      "Test Data": "N/A",
+      "Expected Results": "Multiple Work experiences should be listed.",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_029",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can delete Work Experiences",
+      "Test Case Title": "Verify ESS user is able to delete Work Experiences",
+      "Steps": "1. Login to OrangeHRM as ESS User.\r\n2. Click on MyInfo tab.\r\n3. Click on Qualification button.\r\n4. Click on the check box next to particular entry(one or more) under Work Experience.\r\n5. Click on \"Delete\".",
+      "Test Data": "N/A",
+      "Expected Results": "One or more of the selected entry/ies should be deleted.",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_030",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can add Education Details",
+      "Test Case Title": "Verify ESS user is able to add Education Details.",
+      "Steps": "1. Login to OrangeHRM as ESS User.\r\n2. Click on MyInfo tab.\r\n3. Click on Qualification  button.\r\n4. Click on \"Add\" button under Education.\r\n4. Enter all the required fields.\r\n5. Click \"Save\" once completed.",
+      "Test Data": "N/A",
+      "Expected Results": "The Education Details should be listed.",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_031",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can add multiple Education Details",
+      "Test Case Title": "Verify ESS user is able to add multiple Education Details",
+      "Steps": "Repeat the steps of \"TC_MyInfo_030\".",
+      "Test Data": "N/A",
+      "Expected Results": "Multiple Education Details should be listed.",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_032",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can delete Education Details",
+      "Test Case Title": "Verify ESS user is able to delete Education Details.",
+      "Steps": "1. Login to OrangeHRM as ESS User.\r\n2. Click on MyInfo tab.\r\n3. Click on Qualification.\r\n4. Click on the check box next to particular entry(one or more) under Education.\r\n5. Click on \"Delete\".",
+      "Test Data": "N/A",
+      "Expected Results": "One or more of the selected entry/ies should be deleted.",
+      "Actual Result": "\"Record not Found\" error is shown and the entry is not deleted",
+      "Status(Padded/Failed)": "Failed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_033",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can add Skills",
+      "Test Case Title": "Verify ESS user is able to add Skills.",
+      "Steps": "1. Login to OrangeHRM as ESS User.\r\n2. Click on MyInfo tab.\r\n3. Click on Qualification  button.\r\n4. Click on \"Add\" button under Skills.\r\n4. Enter all the required fields.\r\n5. Click \"Save\" once completed.",
+      "Test Data": "N/A",
+      "Expected Results": "The Skills should be listed.",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_034",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can add multiple Skills ",
+      "Test Case Title": "Verify ESS user is able to add multiple Skills ",
+      "Steps": "Repeat the steps of \"TC_MyInfo_033\".",
+      "Test Data": "N/A",
+      "Expected Results": "Multiple Skills  should be listed.",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_035",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can delete Skills ",
+      "Test Case Title": "Verify ESS user is able to delete Skills .",
+      "Steps": "1. Login to OrangeHRM as ESS User.\r\n2. Click on MyInfo tab.\r\n3. Click on Qualification  button.\r\n4. Click on the check box next to particular entry(one or more) under Skills.\r\n5. Click on \"Delete\".",
+      "Test Data": "N/A",
+      "Expected Results": "One or more of the selected entry/ies should be deleted.",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_036",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can add Languages",
+      "Test Case Title": "Verify ESS user is able to add Languages.",
+      "Steps": "1. Login to OrangeHRM as ESS User.\r\n2. Click on MyInfo tab.\r\n3. Click on Qualification button.\r\n4. Click on \"Add\" button under Languages.\r\n4. Enter all the required fields.\r\n5. Click \"Save\" once completed.",
+      "Test Data": "N/A",
+      "Expected Results": "The Languages should be listed.",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_037",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can add multiple Languages ",
+      "Test Case Title": "Verify ESS user is able to add multiple Languages",
+      "Steps": "Repeat the steps of \"TC_MyInfo_036\".",
+      "Test Data": "N/A",
+      "Expected Results": "Multiple Languages should be listed.",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_038",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can delete Languages",
+      "Test Case Title": "Verify ESS user is able to delete Languages .",
+      "Steps": "1. Login to OrangeHRM as ESS User.\r\n2. Click on MyInfo tab.\r\n3. Click on Qualification  button.\r\n4. Click on the check box next to particular entry(one or more) under Languages.\r\n5. Click on \"Delete\".",
+      "Test Data": "N/A",
+      "Expected Results": "One or more of the selected entry/ies should be deleted.",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_039",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can add License",
+      "Test Case Title": "Verify ESS user is able to add License.",
+      "Steps": "1. Login to OrangeHRM as ESS User.\r\n2. Click on MyInfo tab.\r\n3. Click on Qualification button.\r\n4. Click on \"Add\" button under License.\r\n4. Enter all the required fields.\r\n5. Click \"Save\" once completed.",
+      "Test Data": "N/A",
+      "Expected Results": "The License should be listed.",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_040",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can add multiple License ",
+      "Test Case Title": "Verify ESS user is able to add multiple License",
+      "Steps": "Repeat the steps of \"TC_MyInfo_039\".",
+      "Test Data": "N/A",
+      "Expected Results": "Multiple License should be listed.",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_041",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can delete License",
+      "Test Case Title": "Verify ESS user is able to delete License .",
+      "Steps": "1. Login to OrangeHRM as ESS User.\r\n2. Click on MyInfo tab.\r\n3. Click on Qualification  button.\r\n4. Click on the check box next to particular entry(one or more) under License.\r\n5. Click on \"Delete\".",
+      "Test Data": "N/A",
+      "Expected Results": "One or more of the selected entry/ies should be deleted.",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_042",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can add Attachment under License",
+      "Test Case Title": "Verify ESS user is able to add attachment to support the details.",
+      "Steps": "1. Login to OrangeHRM as ESS User.\r\n2. Click on MyInfo tab.\r\n3. Click on Qualification button.  \r\n4. Click on \"Add\" under Attachment under License.\r\n5. Click on \"Browse\" and select the file from relevant path and click on \"Upload\".",
+      "Test Data": "Attachments of different sizes. ",
+      "Expected Results": "Attachment file should appear under Attachment.",
+      "Actual Result": "The requirement document contains \"Upload\" button but application contains \"Save\" button",
+      "Status(Padded/Failed)": "Partially Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_043",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can add multiple Attachments under License",
+      "Test Case Title": "Verify ESS user is able to add multiple attachments.",
+      "Steps": "Repeat the steps of \"TC_MyInfo_043\".",
+      "Test Data": "N/A",
+      "Expected Results": "ESS user should be able to see multiple attachments under License.",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_044",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.10",
+      "Scenario": "ESS user can delete Attachments under License",
+      "Test Case Title": "Verify ESS user is able to delete attachments under License .",
+      "Steps": "1. Login to OrangeHRM as ESS User.\r\n2. Click on MyInfo tab.\r\n3. Click on Qualification button.\r\n4. Click on the check box next to particular entry(one or more) under Attachment under License.\r\n5. Click on \"Delete\".",
+      "Test Data": "N/A",
+      "Expected Results": "One or more of the selected entry/ies should be deleted.",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_045",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.11",
+      "Scenario": "ESS user can add Membership",
+      "Test Case Title": "Verify ESS user is able to add Membership details.",
+      "Steps": "1. Login to OrangeHRM as ESS User.\r\n2. Click on MyInfo tab.\r\n3. Click on Membership button.\r\n4. Click on \"Add\" button.\r\n4. Enter all the required fields.\r\n5. Click \"Save\" once completed.",
+      "Test Data": "N/A",
+      "Expected Results": "The Membership details should be listed.",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_046",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.11",
+      "Scenario": "ESS user can add multiple Membership ",
+      "Test Case Title": "Verify ESS user is able to add multiple Membership details",
+      "Steps": "Repeat the steps of \"TC_MyInfo_045\".",
+      "Test Data": "N/A",
+      "Expected Results": "Multiple Membership details should be listed.",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_047",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.11",
+      "Scenario": "ESS user can delete Membership",
+      "Test Case Title": "Verify ESS user is able to delete Membership .",
+      "Steps": "1. Login to OrangeHRM as ESS User.\r\n2. Click on MyInfo tab.\r\n3. Click on Membership  button.\r\n4. Click on the check box next to particular entry(one or more).\r\n5. Click on \"Delete\".",
+      "Test Data": "N/A",
+      "Expected Results": "One or more of the selected entry/ies should be deleted.",
+      "Actual Result": "As expected",
+      "Status(Padded/Failed)": "Passed"
+    },
+    {
+      "TC#ID": "TC_MyInfo_048",
+      "Project/Module/Name": "Orange HRM-MyInfo",
+      "Req#ID": "3.1.11",
+      "Scenario": "ESS user can add Attachment under Membership",
+      "Test Case Title": "Verify ESS user is able to add attachment to support the details.",
+      "Steps": "1. Login to OrangeHRM as ESS User.\r\n2. Click on MyInfo tab.\r\n3. Click on License button.  \r\n4. Click on \"Add\" under Attachment.\r\n5. Select the file from relevant path and click on \"Upload\".",
+      "Test Data": "N/A",
+      "Expected Results": "Attachment file should appear under Attachment.",
+      "Actual Result": "The requirement document contains \"Upload\" button but application contains \"Save\" button",
+      "Status(Padded/Failed)": "Partially Passed"
+    }
+  ],
+  "Bug Report": [
+    {
+      "QA": "Bug ID",
+      "__EMPTY": "Module Name",
+      "__EMPTY_1": "Build Number",
+      "__EMPTY_2": "Description",
+      "__EMPTY_3": "TCID",
+      "__EMPTY_4": "Steps to replicate bug",
+      "__EMPTY_5": "Screenshot",
+      "__EMPTY_6": "Severity",
+      "__EMPTY_7": "Priority",
+      "__EMPTY_8": "Reported by",
+      "__EMPTY_9": "Assigned to",
+      "Dev": "Resolution",
+      "__EMPTY_10": "Status",
+      "__EMPTY_11": "Fixed Date"
+    },
+    {
+      "QA": "ORHRM_001",
+      "__EMPTY": "Orange HRM-MyInfo",
+      "__EMPTY_1": 1,
+      "__EMPTY_2": "Dashboard page is seen after the login instead of MyInfo page.",
+      "__EMPTY_3": "TC_MyInfo_001",
+      "__EMPTY_4": "1. Launch browser.\r\n2. Open url \"https://opensource-demo.orangehrmlive.com\"\r\n3. Provide valid username.\r\n4. Provide valid password.\r\n5. Click on login button.",
+      "__EMPTY_6": "S3",
+      "__EMPTY_7": "P3"
+    },
+    {
+      "QA": "ORHRM_002",
+      "__EMPTY": "Orange HRM-MyInfo",
+      "__EMPTY_1": 1,
+      "__EMPTY_2": "The requirement document contains \"Upload\" button but application contains \"Save\" button in Emergency contact Attachment.",
+      "__EMPTY_3": "TC_MyInfo_014",
+      "__EMPTY_4": "1. Login to OrangeHRM as ESS User.\r\n2. Click on MyInfo tab.\r\n3. Click on Emergency Contact button.  \r\n4. Click on \"Add\" under Attachment.\r\n",
+      "__EMPTY_6": "S3",
+      "__EMPTY_7": "P3"
+    },
+    {
+      "QA": "ORHRM_003",
+      "__EMPTY": "Orange HRM-MyInfo",
+      "__EMPTY_1": 1,
+      "__EMPTY_2": "The requirement document contains \"Upload\" button but application contains \"Save\" button in Dependant Attachment.",
+      "__EMPTY_3": "TC_MyInfo_018",
+      "__EMPTY_4": "1. Login to OrangeHRM as ESS User. \r\n2. Click on MyInfo tab. \r\n3. Click on dependant button. \r\n4. Click on \"Add\" under Attachment. ",
+      "__EMPTY_6": "S3",
+      "__EMPTY_7": "P3"
+    },
+    {
+      "QA": "ORHRM_004",
+      "__EMPTY": "Orange HRM-MyInfo",
+      "__EMPTY_1": 1,
+      "__EMPTY_2": "No immigration form is seen directly after clicking on immigration button, you have to click on \"Add\" button to get the form.",
+      "__EMPTY_3": "TC_MyInfo_019",
+      "__EMPTY_4": "1. Login to OrangeHRM as ESS User. \r\n2. Click on MyInfo tab. \r\n3. Click on Immigration button. ",
+      "__EMPTY_6": "S3",
+      "__EMPTY_7": "P3"
+    },
+    {
+      "QA": "ORHRM_005",
+      "__EMPTY": "Orange HRM-MyInfo",
+      "__EMPTY_1": 1,
+      "__EMPTY_2": "The requirement document contains \"Upload\" button but application contains \"Save\" button in Immigration",
+      "__EMPTY_3": "TC_MyInfo_022",
+      "__EMPTY_4": "1. Login to OrangeHRM as ESS User. \r\n2. Click on MyInfo tab. \r\n3. Click on Immigration button. \r\n4. Click on \"Add\" under Attachment. ",
+      "__EMPTY_6": "S3",
+      "__EMPTY_7": "P3"
+    },
+    {
+      "QA": "ORHRM_006",
+      "__EMPTY": "Orange HRM-MyInfo",
+      "__EMPTY_1": 1,
+      "__EMPTY_2": "\"Record not Found\" error is shown and the entry is not deleted when you delete Education detail  in Qualification under Education",
+      "__EMPTY_3": "TC_MyInfo_032",
+      "__EMPTY_4": "1. Login to OrangeHRM as ESS User.\r\n2. Click on MyInfo tab.\r\n3. Click on Qualification.\r\n4. Click on \"Add\" button under Education.\r\n4. Enter all the required fields.\r\n5. Click \"Save\" once completed.\r\n6. Click on the check box next to that entry(one or more) under Education.\r\n7. Click on \"Delete\".",
+      "__EMPTY_6": "S2",
+      "__EMPTY_7": "P2"
+    },
+    {
+      "QA": "ORHRM_007",
+      "__EMPTY": "Orange HRM-MyInfo",
+      "__EMPTY_1": 1,
+      "__EMPTY_2": "The requirement document contains \"Upload\" button but application contains \"Save\" button in Qualification under License.",
+      "__EMPTY_3": "TC_MyInfo_042",
+      "__EMPTY_4": "1. Login to OrangeHRM as ESS User.\r\n2. Click on MyInfo tab.\r\n3. Click on Qualification button.  \r\n4. Click on \"Add\" under Attachment under License.",
+      "__EMPTY_6": "S3",
+      "__EMPTY_7": "P3"
+    },
+    {
+      "QA": "ORHRM_008",
+      "__EMPTY": "Orange HRM-MyInfo",
+      "__EMPTY_1": 1,
+      "__EMPTY_2": "The requirement document contains \"Upload\" button but application contains \"Save\" button in Qualification under Membership",
+      "__EMPTY_3": "TC_MyInfo_048",
+      "__EMPTY_4": "1. Login to OrangeHRM as ESS User.\r\n2. Click on MyInfo tab.\r\n3. Click on License button.  \r\n4. Click on \"Add\" under Attachment under Membership.",
+      "__EMPTY_6": "S3",
+      "__EMPTY_7": "P3"
+    }
+  ],
+  "RTM": [
+    {
+      "TC#ID": "TC_MyInfo_001",
+      "Req#ID": "3.1.1"
+    },
+    {
+      "TC#ID": "TC_MyInfo_002",
+      "Req#ID": "3.1.1"
+    },
+    {
+      "TC#ID": "TC_MyInfo_003",
+      "Req#ID": "3.1.1"
+    },
+    {
+      "TC#ID": "TC_MyInfo_004",
+      "Req#ID": "3.1.1"
+    },
+    {
+      "TC#ID": "TC_MyInfo_005",
+      "Req#ID": "3.1.1"
+    },
+    {
+      "TC#ID": "TC_MyInfo_006",
+      "Req#ID": "3.1.1"
+    },
+    {
+      "TC#ID": "TC_MyInfo_007",
+      "Req#ID": "3.1.1"
+    },
+    {
+      "TC#ID": "TC_MyInfo_008",
+      "Req#ID": "3.1.2"
+    },
+    {
+      "TC#ID": "TC_MyInfo_009",
+      "Req#ID": "3.1.3"
+    },
+    {
+      "TC#ID": "TC_MyInfo_010",
+      "Req#ID": "3.1.3"
+    },
+    {
+      "TC#ID": "TC_MyInfo_011",
+      "Req#ID": "3.1.4"
+    },
+    {
+      "TC#ID": "TC_MyInfo_012",
+      "Req#ID": "3.1.4"
+    },
+    {
+      "TC#ID": "TC_MyInfo_013",
+      "Req#ID": "3.1.4"
+    },
+    {
+      "TC#ID": "TC_MyInfo_014",
+      "Req#ID": "3.1.4"
+    },
+    {
+      "TC#ID": "TC_MyInfo_015",
+      "Req#ID": "3.1.5"
+    },
+    {
+      "TC#ID": "TC_MyInfo_016",
+      "Req#ID": "3.1.5"
+    },
+    {
+      "TC#ID": "TC_MyInfo_017",
+      "Req#ID": "3.1.5"
+    },
+    {
+      "TC#ID": "TC_MyInfo_018",
+      "Req#ID": "3.1.5"
+    },
+    {
+      "TC#ID": "TC_MyInfo_019",
+      "Req#ID": "3.1.6"
+    },
+    {
+      "TC#ID": "TC_MyInfo_020",
+      "Req#ID": "3.1.6"
+    },
+    {
+      "TC#ID": "TC_MyInfo_021",
+      "Req#ID": "3.1.6"
+    },
+    {
+      "TC#ID": "TC_MyInfo_022",
+      "Req#ID": "3.1.6"
+    },
+    {
+      "TC#ID": "TC_MyInfo_023",
+      "Req#ID": "3.1.7"
+    },
+    {
+      "TC#ID": "TC_MyInfo_024",
+      "Req#ID": "3.1.7"
+    },
+    {
+      "TC#ID": "TC_MyInfo_025",
+      "Req#ID": "3.1.8"
+    },
+    {
+      "TC#ID": "TC_MyInfo_026",
+      "Req#ID": "3.1.9"
+    },
+    {
+      "TC#ID": "TC_MyInfo_027",
+      "Req#ID": "3.1.10"
+    },
+    {
+      "TC#ID": "TC_MyInfo_028",
+      "Req#ID": "3.1.10"
+    },
+    {
+      "TC#ID": "TC_MyInfo_029",
+      "Req#ID": "3.1.10"
+    },
+    {
+      "TC#ID": "TC_MyInfo_030",
+      "Req#ID": "3.1.10"
+    },
+    {
+      "TC#ID": "TC_MyInfo_031",
+      "Req#ID": "3.1.10"
+    },
+    {
+      "TC#ID": "TC_MyInfo_032",
+      "Req#ID": "3.1.10"
+    },
+    {
+      "TC#ID": "TC_MyInfo_033",
+      "Req#ID": "3.1.10"
+    },
+    {
+      "TC#ID": "TC_MyInfo_034",
+      "Req#ID": "3.1.10"
+    },
+    {
+      "TC#ID": "TC_MyInfo_035",
+      "Req#ID": "3.1.10"
+    },
+    {
+      "TC#ID": "TC_MyInfo_036",
+      "Req#ID": "3.1.10"
+    },
+    {
+      "TC#ID": "TC_MyInfo_037",
+      "Req#ID": "3.1.10"
+    },
+    {
+      "TC#ID": "TC_MyInfo_038",
+      "Req#ID": "3.1.10"
+    },
+    {
+      "TC#ID": "TC_MyInfo_039",
+      "Req#ID": "3.1.10"
+    },
+    {
+      "TC#ID": "TC_MyInfo_040",
+      "Req#ID": "3.1.10"
+    },
+    {
+      "TC#ID": "TC_MyInfo_041",
+      "Req#ID": "3.1.10"
+    },
+    {
+      "TC#ID": "TC_MyInfo_042",
+      "Req#ID": "3.1.10"
+    },
+    {
+      "TC#ID": "TC_MyInfo_043",
+      "Req#ID": "3.1.10"
+    },
+    {
+      "TC#ID": "TC_MyInfo_044",
+      "Req#ID": "3.1.10"
+    },
+    {
+      "TC#ID": "TC_MyInfo_045",
+      "Req#ID": "3.1.11"
+    },
+    {
+      "TC#ID": "TC_MyInfo_046",
+      "Req#ID": "3.1.11"
+    },
+    {
+      "TC#ID": "TC_MyInfo_047",
+      "Req#ID": "3.1.11"
+    },
+    {
+      "TC#ID": "TC_MyInfo_048",
+      "Req#ID": "3.1.11"
+    }
+  ]
+}

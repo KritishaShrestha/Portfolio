@@ -44,7 +44,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled ? "py-3" : "py-8"}`}
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled ? "py-2 md:py-3" : "py-3 md:py-8"}`}
     >
       <div
         className={`max-w-7xl mx-auto transition-all duration-500 ${isScrolled ? "max-w-[58rem]" : "max-w-7xl"}`}
@@ -52,7 +52,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
         <div
           className={`
           relative flex items-center justify-between transition-all duration-500
-          ${isScrolled ? "px-10 h-[4.5rem] rounded-[28px]" : "px-8 h-16 rounded-[32px]"}
+          ${isScrolled ? "px-4 sm:px-6 md:px-10 h-12 sm:h-14 md:h-[4.5rem] rounded-2xl md:rounded-[28px]" : "px-4 sm:px-6 md:px-8 h-12 sm:h-14 md:h-16 rounded-2xl md:rounded-[32px]"}
           ${
             isScrolled
               ? "bg-white/80 dark:bg-slate-900/80 backdrop-blur-2xl shadow-xl shadow-slate-200/20 dark:shadow-black/20 border border-white/20 dark:border-slate-800"
@@ -62,9 +62,11 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
         >
           <div className="flex items-center">
             <a
-              href="#hero"
+              href="/#hero"
               className={`font-bold tracking-tight bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent drop-shadow-[0_3px_12px_rgba(129,170,222,0.28)] transition-all duration-500 ${
-                isScrolled ? "text-4xl" : "text-5xl"
+                isScrolled
+                  ? "text-2xl sm:text-3xl md:text-4xl"
+                  : "text-3xl sm:text-4xl md:text-5xl"
               }`}
               style={{
                 fontFamily: '"Dancing Script", cursive',
@@ -86,7 +88,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
             {navItems.map((item) => (
               <a
                 key={item}
-                href={`#${item}`}
+                href={`/#${item}`}
                 className={`relative text-md font-medium transition-colors group ${
                   activeSection === item
                     ? "text-primary dark:text-primary"
@@ -103,7 +105,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
             ))}
 
             <a
-              href="#contact"
+              href="/#contact"
               className={`text-md font-medium bg-slate-800 dark:bg-slate-100 text-white dark:text-slate-900 rounded-full hover:scale-105 hover:shadow-lg hover:shadow-primary/20 transition-all active:scale-95 flex items-center gap-2 ${
                 isScrolled ? "px-5 py-1.5" : "px-6 py-3"
               }`}
@@ -152,13 +154,13 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
         ${isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full"}
       `}
       >
-        <div className="flex flex-col items-center justify-center h-full space-y-8">
+        <div className="flex flex-col items-center justify-center h-full space-y-6 sm:space-y-8 px-6">
           {navItems.map((item) => (
             <a
               key={item}
-              href={`#${item}`}
+              href={`/#${item}`}
               onClick={() => setIsMenuOpen(false)}
-              className={`text-4xl font-bold tracking-tighter transition-colors ${
+              className={`text-3xl sm:text-4xl font-bold tracking-tighter transition-colors ${
                 activeSection === item
                   ? "text-primary"
                   : "text-slate-900 dark:text-white hover:text-primary"
@@ -168,9 +170,9 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
             </a>
           ))}
           <a
-            href="#contact"
+            href="/#contact"
             onClick={() => setIsMenuOpen(false)}
-            className="text-4xl font-bold px-8 py-3 bg-slate-800 dark:bg-slate-100 text-white dark:text-slate-900 rounded-full hover:scale-105 hover:shadow-lg hover:shadow-primary/20 transition-all active:scale-95 flex items-center gap-2"
+            className="text-2xl sm:text-4xl font-bold px-6 sm:px-8 py-3 bg-slate-800 dark:bg-slate-100 text-white dark:text-slate-900 rounded-full hover:scale-105 hover:shadow-lg hover:shadow-primary/20 transition-all active:scale-95 flex items-center gap-2"
           >
             <span>Contact</span>
             <span className="material-symbols-outlined">mail</span>

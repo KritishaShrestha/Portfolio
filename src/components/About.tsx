@@ -7,12 +7,12 @@ const About: React.FC = () => {
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center pt-24 pb-12 bg-[#f2f2f2] dark:bg-slate-900 transition-colors"
+      className="min-h-[100svh] flex items-center pt-16 sm:pt-24 pb-12 bg-[#f2f2f2] dark:bg-slate-900 transition-colors"
     >
-      <div className="max-w-7xl mx-auto w-full px-6">
-        <div className="grid md:grid-cols-2 gap-20 items-center">
+      <div className="max-w-7xl mx-auto w-full px-4 sm:px-6">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-20 items-center">
           <div
-            className="relative group transition-all duration-1000 max-w-sm mx-auto"
+            className="relative group transition-all duration-1000 max-w-[16rem] sm:max-w-sm mx-auto"
             onMouseEnter={() => {
               setIsHovered(true);
               setHasHovered(true);
@@ -37,7 +37,7 @@ const About: React.FC = () => {
           </div>
           <div>
             <div>
-              <h2 className="text-5xl md:text-6xl font-bold text-slate-900 dark:text-white leading-[1.1]">
+              <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-slate-900 dark:text-white leading-[1.1]">
                 Testing with{" "}
                 <span className="italic font-light text-slate-400">soul,</span>{" "}
                 <br />
@@ -48,10 +48,7 @@ const About: React.FC = () => {
               </h2>
               <br />
             </div>
-            <div
-              className="space-y-6 text-lg text-slate-500 dark:text-slate-400 font-light leading-relaxed"
-              style={{ textAlign: "justify" }}
-            >
+            <div className="space-y-5 sm:space-y-6 text-base sm:text-lg text-slate-500 dark:text-slate-400 font-light leading-relaxed text-justify">
               <p>
                 I’m a motivated QA enthusiast who enjoys analyzing applications,
                 breaking workflows, and ensuring features work as intended. I’m
