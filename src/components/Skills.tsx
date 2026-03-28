@@ -443,7 +443,7 @@ const Skills: React.FC = () => {
             {professionalSkills.map((category, idx) => (
               <div
                 key={idx}
-                className={`relative overflow-hidden h-full min-h-[21rem] sm:min-h-[22.5rem] flex flex-col p-5 sm:p-6 rounded-2xl border border-slate-300/70 dark:border-slate-700/80 bg-[#f2f2f2] dark:bg-slate-900 shadow-[0_12px_30px_-18px_rgba(15,23,42,0.45)] dark:shadow-[0_16px_34px_-20px_rgba(0,0,0,0.8)] transition-all duration-500 group hover:-translate-y-px hover:shadow-[0_20px_36px_-20px_rgba(15,23,42,0.5)] ${
+                className={`relative overflow-hidden h-full min-h-[21rem] sm:min-h-[22.5rem] flex flex-col p-5 sm:p-6 rounded-2xl border border-slate-200 dark:border-slate-700/80 bg-white shadow-xl dark:bg-slate-900 shadow-[0_12px_30px_-18px_rgba(15,23,42,0.45)] dark:shadow-[0_16px_34px_-20px_rgba(0,0,0,0.8)] transition-all duration-500 group hover:-translate-y-px hover:shadow-[0_20px_36px_-20px_rgba(15,23,42,0.5)] ${
                   activeTab === "skills"
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-3"
@@ -455,7 +455,7 @@ const Skills: React.FC = () => {
               >
                 <div className="absolute inset-0 rounded-2xl border border-white/40 dark:border-white/10 pointer-events-none" />
                 <div className="absolute inset-0 rounded-2xl bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.55),transparent_45%)] dark:bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.07),transparent_45%)] pointer-events-none" />
-                <div className="absolute inset-x-3 top-0 h-1.5 rounded-b-full bg-gradient-to-r from-primary/35 via-accent to-primary/35 opacity-85" />
+                <div className="absolute inset-x-3 top-0 h-1.5 rounded-b-full bg-gradient-to-r from-primary/30 via-accent to-primary/80 opacity-85" />
                 <div className="flex items-start gap-3 mb-8">
                   <div className="mt-0.5 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center border border-primary/20 shadow-inner group-hover:scale-110 transition-transform duration-500 flex-shrink-0">
                     <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-gradient-to-r from-primary to-accent shadow-[0_0_10px_rgba(var(--primary),0.5)] group-hover:animate-pulse" />
@@ -470,7 +470,7 @@ const Skills: React.FC = () => {
                   {category.skills.map((skill, skillIdx) => (
                     <li
                       key={skillIdx}
-                      className="min-h-[2.6rem] sm:min-h-[2.9rem] flex items-center gap-2 px-2 py-2 sm:px-2.5 sm:py-2.5 text-xs sm:text-sm font-medium rounded-lg sm:rounded-xl bg-slate-100/80 dark:bg-slate-900/50 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700/80 hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white dark:hover:text-white hover:border-transparent transition-all duration-300 cursor-default shadow-sm hover:shadow-sm hover:-translate-y-px"
+                      className="min-h-[2.6rem] sm:min-h-[2.9rem] flex items-center gap-2 px-2 py-2 sm:px-2.5 sm:py-2.5 text-xs sm:text-sm font-medium rounded-lg sm:rounded-xl bg-slate-50 dark:bg-slate-900/50 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700/80 hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white dark:hover:text-white hover:border-transparent transition-all duration-300 cursor-default shadow-sm hover:shadow-sm hover:-translate-y-px"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-primary to-accent flex-shrink-0" />
                       <span className="leading-snug text-left">{skill}</span>
