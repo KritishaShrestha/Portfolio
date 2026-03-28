@@ -51,13 +51,13 @@ const Projects: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 w-full">
         <div className="mb-10 md:mb-14 text-center">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 dark:text-white leading-[1.1]">
-            Projects with
-            <span className="italic font-light text-slate-400"> purpose,</span>
+            Works that reflects
+            <span className="italic font-light text-slate-400"> precision, purpose</span>
             <br />
-            built with
+            and
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               {" "}
-              precision.
+              quality.
             </span>
           </h2>
         </div>
