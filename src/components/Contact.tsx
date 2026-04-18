@@ -119,7 +119,7 @@ const Contact: React.FC = () => {
   return (
     <section
       id="contact"
-      className="min-h-[100svh] py-16 sm:py-20 md:py-0 flex items-center bg-white dark:bg-slate-900/50 transition-colors"
+      className="min-h-max md:min-h-[100svh] py-16 sm:py-20 md:py-0 flex items-center bg-white dark:bg-slate-900/50 transition-colors"
     >
       <div className="max-w-5xl w-full mx-auto px-4 sm:px-5 md:px-6 mt-0 md:mt-14">
         <div className="rounded-[1.6rem] overflow-hidden border border-slate-200 dark:border-transparent shadow-[0_24px_70px_-38px_rgba(15,23,42,0.45)] dark:shadow-[0_28px_80px_-42px_rgba(96,165,250,0.16)] bg-white dark:bg-slate-900">

@@ -7,7 +7,7 @@ const About: React.FC = () => {
   return (
     <section
       id="about"
-      className="min-h-[100svh] flex items-center pt-16 sm:pt-24 pb-12 bg-[#f2f2f2] dark:bg-slate-900 transition-colors"
+      className="min-h-max md:min-h-[100svh] flex items-center pt-16 sm:pt-24 pb-12 bg-[#f2f2f2] dark:bg-slate-900 transition-colors"
     >
       <div className="max-w-7xl mx-auto w-full px-4 sm:px-6">
         <div className="grid md:grid-cols-2 gap-10 md:gap-20 items-center">

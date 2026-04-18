@@ -46,7 +46,7 @@ const MyWorks: React.FC = () => {
   return (
     <section
       id="my-works"
-      className="min-h-[100svh] xl:h-[100svh] py-20 md:py-24 bg-[#f2f2f2] dark:bg-slate-900 transition-colors"
+      className="min-h-max md:min-h-[100svh] xl:h-[100svh] py-20 md:py-24 bg-[#f2f2f2] dark:bg-slate-900 transition-colors"
     >
       <div className="max-w-7xl mx-auto px-6 w-full">
         <div className="mb-10 md:mb-14 text-center">
@@ -110,11 +110,11 @@ const MyWorks: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="mt-1 flex items-center justify-end">
+                <div className="mt-3 sm:mt-1 flex items-center justify-center sm:justify-end">
                   {index === 0 ? (
                     <Link
                       to={project.link}
-                      className="inline-flex items-center rounded-full bg-slate-800 dark:bg-slate-100 text-white dark:text-slate-900 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.12em] transition-all hover:scale-[1.03] hover:shadow-lg hover:shadow-primary/20"
+                      className="inline-flex justify-center w-full sm:w-auto items-center rounded-full bg-slate-800 dark:bg-slate-100 text-white dark:text-slate-900 px-6 py-3 sm:px-4 sm:py-2 text-[12px] sm:text-[11px] font-semibold uppercase tracking-[0.12em] transition-all hover:scale-[1.03] hover:shadow-lg hover:shadow-primary/20"
                     >
                       View Case Study
                     </Link>
@@ -123,7 +123,7 @@ const MyWorks: React.FC = () => {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center rounded-full bg-slate-800 dark:bg-slate-100 text-white dark:text-slate-900 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.12em] transition-all hover:scale-[1.03] hover:shadow-lg hover:shadow-primary/20"
+                      className="inline-flex justify-center w-full sm:w-auto items-center rounded-full bg-slate-800 dark:bg-slate-100 text-white dark:text-slate-900 px-6 py-3 sm:px-4 sm:py-2 text-[12px] sm:text-[11px] font-semibold uppercase tracking-[0.12em] transition-all hover:scale-[1.03] hover:shadow-lg hover:shadow-primary/20"
                     >
                       View Project
                     </a>

@@ -31,11 +31,11 @@ const Home: React.FC<HomeProps> = ({ isDarkMode, toggleDarkMode }) => {
   return (
     <main>
       <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
-      <Hero />
-      <About />
-      <Skills />
-      <MyWorks />
-      <Contact />
+      <div className="snap-start"><Hero /></div>
+      <div className="snap-start"><About /></div>
+      <div className="snap-start"><Skills /></div>
+      <div className="snap-start"><MyWorks /></div>
+      <div className="snap-start"><Contact /></div>
     </main>
   );
 };

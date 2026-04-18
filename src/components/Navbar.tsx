@@ -44,15 +44,15 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled ? "py-2 md:py-3" : "py-3 md:py-8"}`}
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled ? "py-2 md:py-3" : "py-3 md:py-6"}`}
     >
       <div
-        className={`max-w-7xl mx-auto transition-all duration-500 ${isScrolled ? "max-w-[58rem]" : "max-w-7xl"}`}
+        className={`mx-auto transition-all duration-500 ${isScrolled ? "max-w-[58rem] w-[calc(100%-2rem)] md:w-full" : "max-w-7xl w-full"}`}
       >
         <div
           className={`
           relative flex items-center justify-between transition-all duration-500
-          ${isScrolled ? "px-4 sm:px-6 md:px-10 h-12 sm:h-14 md:h-[4.5rem] rounded-2xl md:rounded-[28px]" : "px-4 sm:px-6 md:px-8 h-12 sm:h-14 md:h-16 rounded-2xl md:rounded-[32px]"}
+          ${isScrolled ? "px-4 sm:px-6 md:px-10 h-12 sm:h-14 md:h-[4.5rem] rounded-full md:rounded-[28px]" : "px-4 sm:px-6 md:px-8 h-16 sm:h-16 md:h-16 rounded-2xl md:rounded-[32px]"}
           ${
             isScrolled
               ? "bg-white/80 dark:bg-slate-900/80 backdrop-blur-2xl shadow-xl shadow-slate-200/20 dark:shadow-black/20 border border-white/20 dark:border-slate-800"

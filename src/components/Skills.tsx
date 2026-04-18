@@ -276,7 +276,7 @@ const Skills: React.FC = () => {
   return (
     <section
       id="skills"
-      className="min-h-[100svh] flex flex-col justify-center py-8 sm:py-12 px-4 md:px-6 bg-white dark:bg-slate-900/50 transition-colors relative overflow-hidden select-none"
+      className="min-h-0 md:min-h-[100svh] flex flex-col justify-center py-16 sm:py-12 px-4 md:px-6 bg-white dark:bg-slate-900/50 transition-colors relative overflow-hidden select-none"
     >
       <div className="max-w-7xl mx-auto w-full mt-6 sm:mt-16 md:mt-16 mb-4 sm:mb-6 flex-shrink-0 z-20 relative px-4 sm:px-6 md:px-10">
         <div className="relative flex flex-col items-center justify-center">
@@ -294,30 +294,30 @@ const Skills: React.FC = () => {
 
           {/* Toggle Switch */}
           <div className="mt-4 md:mt-0 md:absolute md:right-10 md:top-1/2 md:-translate-y-1/2">
-            <div className="relative flex items-center p-1 bg-slate-100 dark:bg-slate-800/80 rounded-full border border-slate-200 dark:border-slate-700/50 shadow-inner scale-85 sm:scale-95 md:scale-100 origin-right">
+            <div className="relative flex items-center p-1.5 bg-white shadow-md dark:bg-slate-800/80 rounded-full border border-slate-200 dark:border-slate-700/50 dark:shadow-inner scale-85 sm:scale-95 md:scale-100 origin-right">
               <button
                 onClick={() => setActiveTab("tools")}
-                className={`relative z-10 px-6 sm:px-8 py-2.5 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 ${
+                className={`relative z-10 px-6 sm:px-8 py-2.5 rounded-full text-sm sm:text-base font-bold transition-all duration-300 ${
                   activeTab === "tools"
-                    ? "text-white drop-shadow-md"
-                    : "text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200"
+                    ? "text-slate-900 dark:text-white dark:drop-shadow-sm"
+                    : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 font-medium"
                 }`}
               >
                 Tools
               </button>
               <button
                 onClick={() => setActiveTab("skills")}
-                className={`relative z-10 px-6 sm:px-8 py-2.5 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 ${
+                className={`relative z-10 px-6 sm:px-8 py-2.5 rounded-full text-sm sm:text-base font-bold transition-all duration-300 ${
                   activeTab === "skills"
-                    ? "text-white drop-shadow-md"
-                    : "text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200"
+                    ? "text-slate-900 dark:text-white dark:drop-shadow-sm"
+                    : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 font-medium"
                 }`}
               >
                 Skills
               </button>
               {/* Sliding background pill */}
               <div
-                className="absolute top-1.5 bottom-1.5 w-[calc(50%-6px)] bg-gradient-to-r from-primary to-accent rounded-full transition-transform duration-500 shadow-lg"
+                className="absolute top-1.5 bottom-1.5 w-[calc(50%-6px)] bg-gradient-to-r from-primary to-accent border border-primary/50 dark:border-transparent rounded-full transition-transform duration-500 shadow-md"
                 style={{
                   transform:
                     activeTab === "tools"
@@ -337,8 +337,8 @@ const Skills: React.FC = () => {
         <div
           className={`col-start-1 row-start-1 w-full transition-all duration-700 ease-out flex flex-col items-center justify-center ${
             activeTab === "tools"
-              ? "opacity-100 z-10 translate-y-0 pointer-events-auto"
-              : "opacity-0 -z-10 translate-y-8 pointer-events-none"
+              ? "opacity-100 z-10 translate-y-0 pointer-events-auto relative"
+              : "opacity-0 -z-10 translate-y-8 pointer-events-none absolute inset-x-0"
           }`}
         >
           <div className="w-full flex items-end justify-center">
@@ -435,15 +435,15 @@ const Skills: React.FC = () => {
         <div
           className={`col-start-1 row-start-1 w-full transition-all duration-700 ease-out px-4 sm:px-6 pt-0 pb-4 ${
             activeTab === "skills"
-              ? "opacity-100 z-10 translate-y-0 pointer-events-auto"
-              : "opacity-0 -z-10 translate-y-8 pointer-events-none"
+              ? "opacity-100 z-10 translate-y-0 pointer-events-auto relative"
+              : "opacity-0 -z-10 translate-y-8 pointer-events-none absolute inset-x-0"
           }`}
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 max-w-6xl mx-auto w-full items-stretch">
             {professionalSkills.map((category, idx) => (
               <div
                 key={idx}
-                className={`relative overflow-hidden h-full min-h-[21rem] sm:min-h-[22.5rem] flex flex-col p-5 sm:p-6 rounded-2xl border border-slate-200 dark:border-slate-700/80 bg-white shadow-xl dark:bg-slate-900 shadow-[0_12px_30px_-18px_rgba(15,23,42,0.45)] dark:shadow-[0_16px_34px_-20px_rgba(0,0,0,0.8)] transition-all duration-500 group hover:-translate-y-px hover:shadow-[0_20px_36px_-20px_rgba(15,23,42,0.5)] ${
+                className={`relative overflow-hidden h-full min-h-[16rem] sm:min-h-[22.5rem] flex flex-col p-5 sm:p-6 rounded-2xl border border-slate-200 dark:border-slate-700/80 bg-slate-50 shadow-xl dark:bg-slate-900 shadow-[0_12px_30px_-18px_rgba(15,23,42,0.45)] dark:shadow-[0_16px_34px_-20px_rgba(0,0,0,0.8)] transition-all duration-500 group hover:-translate-y-px hover:shadow-[0_20px_36px_-20px_rgba(15,23,42,0.5)] ${
                   activeTab === "skills"
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-3"
@@ -453,15 +453,15 @@ const Skills: React.FC = () => {
                     activeTab === "skills" ? `${idx * 70}ms` : "0ms",
                 }}
               >
-                <div className="absolute inset-0 rounded-2xl border border-white/40 dark:border-white/10 pointer-events-none" />
-                <div className="absolute inset-0 rounded-2xl bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.55),transparent_45%)] dark:bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.07),transparent_45%)] pointer-events-none" />
-                <div className="absolute inset-x-3 top-0 h-1.5 rounded-b-full bg-gradient-to-r from-primary/30 via-accent to-primary/80 opacity-85" />
-                <div className="flex items-start gap-3 mb-8">
-                  <div className="mt-0.5 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center border border-primary/20 shadow-inner group-hover:scale-110 transition-transform duration-500 flex-shrink-0">
+                <div className="absolute inset-0 rounded-2xl border border-white/60 dark:border-white/10 pointer-events-none" />
+                <div className="absolute inset-0 rounded-2xl bg-transparent dark:bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.07),transparent_45%)] pointer-events-none" />
+                <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-primary to-accent border-b border-primary/50 dark:border-transparent shadow-sm" />
+                <div className="flex items-start gap-3 mt-2 mb-8">
+                  <div className="mt-0.5 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center border border-primary/30 shadow-inner group-hover:scale-110 transition-transform duration-500 flex-shrink-0">
                     <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-gradient-to-r from-primary to-accent shadow-[0_0_10px_rgba(var(--primary),0.5)] group-hover:animate-pulse" />
                   </div>
                   <div className="min-w-0 min-h-[3.25rem] sm:min-h-[3.75rem] flex items-start">
-                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-800 dark:text-slate-100 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-accent group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300 leading-tight">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-900 dark:text-slate-100 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-accent group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300 leading-tight">
                       {category.category}
                     </h3>
                   </div>
@@ -470,7 +470,7 @@ const Skills: React.FC = () => {
                   {category.skills.map((skill, skillIdx) => (
                     <li
                       key={skillIdx}
-                      className="min-h-[2.6rem] sm:min-h-[2.9rem] flex items-center gap-2 px-2 py-2 sm:px-2.5 sm:py-2.5 text-xs sm:text-sm font-medium rounded-lg sm:rounded-xl bg-slate-50 dark:bg-slate-900/50 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700/80 hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white dark:hover:text-white hover:border-transparent transition-all duration-300 cursor-default shadow-sm hover:shadow-sm hover:-translate-y-px"
+                      className="min-h-[2.6rem] sm:min-h-[2.9rem] flex items-center gap-2 px-2 py-2 sm:px-2.5 sm:py-2.5 text-xs sm:text-sm font-medium rounded-lg sm:rounded-xl bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-200 border border-slate-200/80 dark:border-slate-700/80 hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-slate-900 dark:hover:text-white dark:hover:drop-shadow-sm hover:font-bold hover:border-primary/50 dark:hover:border-transparent transition-all duration-300 cursor-default shadow-sm hover:shadow-md hover:-translate-y-px"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-primary to-accent flex-shrink-0" />
                       <span className="leading-snug text-left">{skill}</span>
