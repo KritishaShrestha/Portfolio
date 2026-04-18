@@ -212,9 +212,9 @@ const Skills: React.FC = () => {
   const isTablet = effectiveWidth < 1024;
 
   const iconSize = clamp(
-    effectiveWidth * (isMobile ? 0.07 : isTablet ? 0.06 : 0.05),
-    isMobile ? 28 : isTablet ? 34 : 40,
-    isMobile ? 44 : isTablet ? 56 : 72,
+    effectiveWidth * (isMobile ? 0.10 : isTablet ? 0.06 : 0.05),
+    isMobile ? 40 : isTablet ? 34 : 40,
+    isMobile ? 54 : isTablet ? 56 : 72,
   );
 
   // Make the arc larger so it's less congested and the curve is a bit flatter
